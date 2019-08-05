@@ -75,7 +75,6 @@ jQuery(document).ready(function($) {
       .children()
       .toggleClass("show-sub-menu");
   });
-  alert("hello");
   // if ($("#user-nav li ul").hasClass("show-sub-menu") & $(document).click()) {
   //   alert("Has Sub menu class and clicked ");
   // } else if ($("#user-nav li ul").not("show-sub-menu") & $(document).click()) {
