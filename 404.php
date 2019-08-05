@@ -1,16 +1,15 @@
+
+<!-- Test commit Ram ram  -->
 <?php
 /**
  * The template for displaying 404 pages (not found).
  *
  * @package understrap
  */
-
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
-
 get_header();
-
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
@@ -65,11 +64,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<?php endif; ?>
 
 							<?php
-
 							/* translators: %1$s: smiley */
 							$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'understrap' ), convert_smilies( ':)' ) ) . '</p>';
 							the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-
 							the_widget( 'WP_Widget_Tag_Cloud' );
 							?>
 
