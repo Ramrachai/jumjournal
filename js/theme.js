@@ -12527,7 +12527,8 @@
   }, i;
 });
 jQuery(document).ready(function ($) {
-  // Main menu show/hide
+  alert('alert from Tamal'); // Main menu show/hide
+
   $(".site-div-nav").on("click", "#div-nav-control", function () {
     $(".site-div-nav").toggleClass("active");
   }); // fav-icon animation for index.html page
@@ -12578,8 +12579,7 @@ jQuery(document).ready(function ($) {
   });
   $("#user-nav li").click(function () {
     $(this).children().toggleClass("show-sub-menu");
-  });
-  alert("hello"); // if ($("#user-nav li ul").hasClass("show-sub-menu") & $(document).click()) {
+  }); // if ($("#user-nav li ul").hasClass("show-sub-menu") & $(document).click()) {
   //   alert("Has Sub menu class and clicked ");
   // } else if ($("#user-nav li ul").not("show-sub-menu") & $(document).click()) {
   //   alert("Sorry, do not have sub menu class  ");

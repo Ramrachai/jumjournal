@@ -1,4 +1,5 @@
 jQuery(document).ready(function($) {
+  alert ('alert from Tamal');
   // Main menu show/hide
   $(".site-div-nav").on("click", "#div-nav-control", function() {
     $(".site-div-nav").toggleClass("active");
