@@ -75,7 +75,7 @@ jQuery(document).ready(function($) {
       .children()
       .toggleClass("show-sub-menu");
   });
-
+  alert("hello");
   // if ($("#user-nav li ul").hasClass("show-sub-menu") & $(document).click()) {
   //   alert("Has Sub menu class and clicked ");
   // } else if ($("#user-nav li ul").not("show-sub-menu") & $(document).click()) {
@@ -99,7 +99,6 @@ jQuery(document).ready(function($) {
     var container_sub_menu1 = $("#sub-menu1");
     var container_sub_menu2 = $("#sub-menu2");
     var container_sub_menu3 = $("#sub-menu3");
-
     // left bar
     // if the target of the click isn't the container nor a descendant of the container
     if (!container.is(e.target) && container.has(e.target).length === 0) {
