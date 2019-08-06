@@ -1,5 +1,4 @@
 jQuery(document).ready(function($) {
-  alert ('alert from Tamal');
   // Main menu show/hide
   $(".site-div-nav").on("click", "#div-nav-control", function() {
     $(".site-div-nav").toggleClass("active");
@@ -235,5 +234,20 @@ jQuery(document).ready(function($) {
         items: 8
       }
     }
+  });
+
+  // responsive
+  function checkPosition() {
+    if (window.matchMedia("(max-width: 767px)").matches) {
+      //...
+      alert("Mobile warning");
+    } else {
+      //...
+    }
+  }
+  // checkPosition();
+
+  $(".mobile-search-icon").click(function() {
+    $(".site-search").toggleClass("toggle-search-form");
   });
 });

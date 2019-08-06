@@ -44,13 +44,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 							<h1 class="navbar-brand mb-0">
               
-            Hello 
+
               </h1>
 
 						<?php else : ?>
 
 							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
-              Hello 2
+
               Demo 
               </a>
 
@@ -618,30 +618,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 
           </div>
         </div>
-
         <div class="col-2 col-md-5 col-lg-5">
-          <div class="header-icon-mobile d-md-none d-lg-none d-xl-none">
-            <a href="#" data-toggle="modal" data-target="#searchModal"><i class="fas fa-search"></i></a>
+          <div class="show-on-mobile hide-on-pc">
+            <button class = 'mobile-search-icon'>
+              <i class='fa fa-search'></i>
+            </button>
           </div>
-          <!-- modal for search -->
-          <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-body">
-                    <div class="site-search">
-                      <form method="get" class="site-searchform" action="" role="search">
-                        <input class="searchform-control" name="s" type="text" placeholder="Type here…" value="">
-                        <!-- <input class="searchform-searchbtn" name="submit" type="submit" value="Search"> -->
-                        <button type="submit" class='btn btn-success search-btn'><i class ='fa fa-search'></i></button>
-hello 
-                      </form>
-                    </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="site-search hidden-sm-down">
+          <div class="site-search ">
             <?php get_search_form(); ?>
           </div>
         </div>

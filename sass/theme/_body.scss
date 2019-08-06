@@ -1,27 +1,29 @@
 body {
   background-color: $bg-body;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-size: 1rem;
 }
 
 // Font family
 button {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 // Links
 a {
   color: $primary-light;
 
-  &:focus, &:hover {
+  &:focus,
+  &:hover {
     color: $primary-light;
     text-decoration: none;
     opacity: $opacity;
   }
 }
 // Images
-img, figure {
+img,
+figure {
   max-width: 100%;
 }
 .img-responsive {
@@ -44,7 +46,8 @@ img, figure {
   box-shadow: $dp8;
   opacity: $opacity;
 
-  &:focus, &:hover {
+  &:focus,
+  &:hover {
     color: $white;
     box-shadow: $dp16;
     opacity: $no-opacity;
@@ -101,4 +104,7 @@ img, figure {
 }
 .mt-5 {
   margin-top: 5rem !important;
+}
+.site {
+  overflow: hidden;
 }

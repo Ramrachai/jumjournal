@@ -1,5 +1,5 @@
 .jumjournal-hero {
-  background-image: url("../images/hero-image-1x.jpg");
+  // background-image: url("../images/hero-image-1x.jpg");
 
   .leader {
     img {
@@ -17,24 +17,29 @@
   }
 }
 .jumjournal-hero.page-header {
-  padding-top: 2rem;
+  // padding-top: 2rem;
+  background: $white;
+  height: 550px;
+  color: $white2;
   .heading {
     font-size: 2rem;
     font-weight: 700;
-    line-height: 1;
+    // line-height: 1;
     letter-spacing: 0.125rem;
-    padding-bottom: 0.5rem;
-    margin-bottom: 0.5rem;
+    // padding-bottom: 0.5rem;
+    // margin-bottom: 0.5rem;
   }
   .moto {
-    display: inline-block;
-    width: 65%;
+    // display: inline-block;
+    // width: 65%;
     text-transform: none;
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-size: 1.125rem;
-    letter-spacing: 0;
-    line-height: 1.5;
+    padding: 0;
+    padding-bottom: 20px;
+    // letter-spacing: 0;
+    // line-height: 1.5;
   }
 }
 

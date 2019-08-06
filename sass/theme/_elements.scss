@@ -1,7 +1,11 @@
 // Content classes
 .content-inner {
-  display: inline-block;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  top: 50%;
+  // width: 100%;
   &.center {
     text-align: center;
   }
@@ -27,7 +31,7 @@
 // Line
 .text-content {
   text-align: justify;
-  
+
   &.type-one {
     padding-left: 2.5rem;
     position: relative;
@@ -46,15 +50,15 @@
 }
 // FAV Icon
 #fav {
-	height: 36px;
-	width: 36px;
-	background-color: $white;
-	border-radius: 50%;
-	box-shadow: 0px 1px 5px $dark;
-	position: absolute;
-	z-index: 9;
-	left: 50%;
-  bottom: -1rem;
+  height: 36px;
+  width: 36px;
+  background-color: $white;
+  border-radius: 50%;
+  box-shadow: 0px 1px 5px $dark;
+  position: absolute;
+  z-index: 9;
+  left: 50%;
+  bottom: -100% !important;
   text-align: center;
   margin-left: -1rem;
   cursor: pointer;
@@ -70,8 +74,8 @@
 // Site Buttons
 .site-btn {
   padding: 9px 32px;
-  font-size: .875rem;
-  font-family: 'Roboto', sans-serif;
+  font-size: 0.875rem;
+  font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   text-align: center;
   font-weight: 600;
@@ -84,7 +88,8 @@
   outline: 0;
   border: 0;
   cursor: pointer;
-  &:focus, &:hover {
+  &:focus,
+  &:hover {
     text-decoration: none;
     box-shadow: $dp8;
   }
@@ -106,7 +111,8 @@
   border-radius: 0.125rem;
   box-shadow: $dp2;
 
-  &:focus, &:hover {
+  &:focus,
+  &:hover {
     opacity: $no-opacity;
     color: $white;
     text-decoration: none;
@@ -129,11 +135,12 @@
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   margin-bottom: 2rem;
   min-height: 180px;
 
-  &:focus, &:hover {
+  &:focus,
+  &:hover {
     box-shadow: $dp8;
   }
 
@@ -144,7 +151,7 @@
 
     i {
       font-size: 1.5rem;
-      margin-right: .5rem;
+      margin-right: 0.5rem;
     }
     h3 {
       font-size: 1.5rem;
@@ -165,18 +172,20 @@
   position: absolute;
   z-index: 9;
   top: -16px;
-  &:focus, &:hover {
+  &:focus,
+  &:hover {
     box-shadow: $dp8;
   }
 
   &.no-link {
-    padding: .45rem 1rem;
+    padding: 0.45rem 1rem;
   }
   a {
-    padding: .45rem 1rem;
+    padding: 0.45rem 1rem;
     color: $white;
     display: inline-block;
-    &:focus, &:hover {
+    &:focus,
+    &:hover {
       color: $white;
     }
   }
@@ -194,7 +203,6 @@
     top: 1px;
     transform: rotate(45deg);
   }
-
 }
 .cat-tilte.color-one {
   background-color: $color-one;
@@ -254,13 +262,14 @@
   padding: 1rem;
   border-radius: 0.375rem;
 
-  &:focus, &:hover {
+  &:focus,
+  &:hover {
     box-shadow: $dp8;
     color: $primary;
     opacity: $opacity;
     //background-color: $accordion-bg;
   }
-  
+
   .icon {
     font-size: 2rem;
     margin-right: 0.5rem;
@@ -313,7 +322,8 @@
     outline: none;
     border: 0;
     padding: 0;
-    &:focus, &:hover {
+    &:focus,
+    &:hover {
       outline: none;
       border: 0;
       box-shadow: none;
@@ -332,12 +342,10 @@ audio {
   height: 40px;
 }
 
-
-
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
   .page-header #fav {
-    bottom: -3rem!important;
+    bottom: -7.5rem !important;
   }
   .text-content.type-one {
     padding-left: 1.25rem;
@@ -355,13 +363,16 @@ audio {
 }
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
-
 }
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 991.98px) {
-  
 }
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) and (max-width: 1199.98px) {
+}
 
+@media only screen and (max-width: 600px) {
+  .content-inner {
+    top: 15%;
+  }
 }

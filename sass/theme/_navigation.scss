@@ -19,7 +19,7 @@
 .site-div-nav,
 .div-nav,
 .div-nav-control {
-  background-color: $header-bg-dark;
+  background-color: $logo-color;
 }
 .site-div-nav {
   height: 4px;
@@ -366,8 +366,8 @@
   display: inline-block;
   width: 100%;
   i {
-    color: $white;
-    opacity: $opacity-light;
+    color: $white2;
+    // opacity: $opacity-light;
     font-size: 24px;
     padding: 5px 7px;
     border-radius: 50%;
@@ -462,5 +462,10 @@
   }
   .div-nav a {
     padding: 0 1rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #user-nav {
+    display: none;
   }
 }

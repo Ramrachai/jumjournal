@@ -33,6 +33,17 @@
     }
   }
 }
+
+.search-filter {
+  border: none;
+  padding: 6px 0;
+  padding-left: 10px;
+  background: #eaeaea;
+  font-size: 14px;
+}
+.field {
+  padding: 18px;
+}
 .search-results {
   article {
     border-bottom: 1px solid #ddd;
@@ -78,9 +89,10 @@
     padding: 1rem;
   }
 }
-// Searchform
+
+// Header Searchform
 .site-searchform {
-  display: inline-block;
+  // display: inline-block;
   margin-top: 1rem;
   width: 100%;
   input {
@@ -91,28 +103,28 @@
     padding: 0 1rem;
   }
   input[type="text"] {
-    width: 360px;
+    // width: 360px;
     border-radius: 2px 0 0 2px;
     background-color: $white;
-    opacity: $opacity-light;
+    // opacity: $opacity-light;
   }
   input[type="submit"] {
     //background-color: $white;
-    background-image: url(../images/site-icons/icon-search.png);
-    opacity: $opacity-light;
+    // background-image: url(../images/site-icons/icon-search.png);
+    // opacity: $opacity-light;
     border-radius: 0 2px 2px 0;
     margin-left: 0;
     cursor: pointer;
     position: relative;
     text-indent: -9999px;
-    width: 64px;
+    // width: 64px;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
   }
   input[type="text"],
   input[type="submit"] {
-    float: left;
+    // float: left;
 
     &:focus,
     &:hover {

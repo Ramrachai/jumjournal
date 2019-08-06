@@ -26,8 +26,10 @@ svg#Layer_1 {
   display: none;
 }
 .site-header {
-  background-color: $primary;
-  padding: 16px;
+  padding: 0;
+  background: $grey2;
+  padding-top: 2px;
+
   .mobile-sidebar-expand.left {
     width: 10%;
   }
@@ -115,8 +117,7 @@ svg#Layer_1 {
 .header-icon-mobile {
   margin-top: 5px;
   i {
-    color: #fff;
-    opacity: 0.54;
+    color: $white2;
     font-size: 24px;
     padding: 5px 7px;
     border-radius: 50%;
@@ -125,12 +126,21 @@ svg#Layer_1 {
     width: 36px;
   }
 }
-
+.mobile-search-icon {
+  background: transparent;
+  border: none;
+  color: $white2;
+  position: absolute;
+  left: 25px;
+  top: 10px;
+  padding: 4px 22px;
+}
+.toggle-search-form {
+  right: -65px !important ;
+  transition: right 0.5s;
+}
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
-  .logo {
-    text-align: center;
-  }
   .modal .site-search {
     width: 100%;
     form {
@@ -146,9 +156,6 @@ svg#Layer_1 {
     }
   }
 }
-// Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) {
-}
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 991.98px) {
   #user-nav {
@@ -161,6 +168,60 @@ svg#Layer_1 {
     }
   }
 }
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) and (max-width: 1199.98px) {
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .show-on-mobile {
+    display: block;
+  }
+
+  #site-div-nav {
+    display: none;
+  }
+  .site-search {
+    position: absolute;
+    width: 400px;
+    right: -500px;
+    top: 50px;
+    max-width: 340px;
+    transition: right 0.5s;
+  }
+  .site-search select {
+    width: 65px;
+  }
+  .logo {
+    position: absolute;
+    left: 40%;
+  }
+  .site-header {
+    height: 60px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .hide-on-pc {
+    display: none;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .hide-on-pc {
+    display: none;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .hide-on-pc {
+    display: none;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .hide-on-pc {
+    display: none;
+  }
 }

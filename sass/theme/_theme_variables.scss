@@ -2,25 +2,26 @@
 // To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
 // Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
 
-
 //$primary: #5533ff; // Thats a sample how you could change a BootStrap variable.
 $bg-body: #eee;
 $logo-color: #00c08d;
 
 // Header bg
-$header-bg-dark: #303C42;
-$dark: #303C42;
+$header-bg-dark: #303c42;
+$dark: #303c42;
 $dark-light: #3a4950;
 $dark-hard: #273136;
 
 // Color palattes
 $primary: #055842;
-$primary-light: #0A8967;
+$primary-light: #0a8967;
 
 // Font colors
 $white: #fff;
+$white2: rgb(224, 224, 224);
 $black: #111;
-$grey: #6D6D6D;
+$grey: #6d6d6d;
+$grey2: #3c3c3c;
 
 // Paddings
 $px48: 48px;
@@ -37,9 +38,9 @@ $mb-menu-font: #111;
 $mb-menu-font-hover: #fff;
 
 // Opacity
-$opacity: .87;
-$opacity-light: .54;
-$opacity-thin: .34;
+$opacity: 0.87;
+$opacity-light: 0.54;
+$opacity-thin: 0.34;
 $no-opacity: 1;
 
 // Submit form
@@ -47,7 +48,7 @@ $field-bg: #ededed;
 
 // Buttons
 $site-btn-white: #efefef;
-$more-post-bg: #DFDFDF;
+$more-post-bg: #dfdfdf;
 
 // Box Nav
 $box-nav-bg: #fafafa;
@@ -55,29 +56,29 @@ $box-nav-bg: #fafafa;
 $ef: #efefef;
 
 // Home circle colors
-$circle-one: #F55A5A;
-$circle-two: #74C043;
-$circle-three: #FF7C00;
+$circle-one: #f55a5a;
+$circle-two: #74c043;
+$circle-three: #ff7c00;
 
 // Article: Single Post
 $article-bg-one: #fafafa;
 
 // Colors
 $color-one: #283593;
-$color-one-dark: #09135A;
-$color-two: #1565C0;
+$color-one-dark: #09135a;
+$color-two: #1565c0;
 $color-two-dark: #084183;
-$color-three: #6A1B9A;
-$color-three-dark: #460B6A;
-$color-four: #00695C;
-$color-four-dark: #004D43;
-$color-five: #00838F;
-$color-five-dark: #00555D;
-$color-six: #5D4037;
-$color-six-dark: #492F26;
-$color-seven: #BF360C;
+$color-three: #6a1b9a;
+$color-three-dark: #460b6a;
+$color-four: #00695c;
+$color-four-dark: #004d43;
+$color-five: #00838f;
+$color-five-dark: #00555d;
+$color-six: #5d4037;
+$color-six-dark: #492f26;
+$color-seven: #bf360c;
 $color-seven-dark: #812306;
-$color-eight: #E65100;
+$color-eight: #e65100;
 $color-eight-dark: #953400;
 
 $color-nine: #e6a200;
@@ -87,23 +88,30 @@ $color-ten: #00cee6;
 $post-image-height: 17.5rem;
 
 // Shadows
-$dp2: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+$dp2: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+  0 1px 5px 0 rgba(0, 0, 0, 0.12);
 
-$dp3: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+$dp3: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2),
+  0 1px 8px 0 rgba(0, 0, 0, 0.12);
 
-$dp4: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+$dp4: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12),
+  0 2px 4px -1px rgba(0, 0, 0, 0.2);
 
-$dp6: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+$dp6: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12),
+  0 3px 5px -1px rgba(0, 0, 0, 0.2);
 
-$dp8: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+$dp8: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12),
+  0 5px 5px -3px rgba(0, 0, 0, 0.2);
 
-$dp16: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+$dp16: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12),
+  0 8px 10px -5px rgba(0, 0, 0, 0.2);
 
-$dp24: 0 9px 46px 8px rgba(0, 0, 0, 0.14), 0 11px 15px -7px rgba(0, 0, 0, 0.12), 0 24px 38px 3px rgba(0, 0, 0, 0.2);
+$dp24: 0 9px 46px 8px rgba(0, 0, 0, 0.14), 0 11px 15px -7px rgba(0, 0, 0, 0.12),
+  0 24px 38px 3px rgba(0, 0, 0, 0.2);
 
 // Library
-$more-books-bg: #E65100;
-$read-now-bg: #E65100;
+$more-books-bg: #e65100;
+$read-now-bg: #e65100;
 $book-block-bg: #fff;
 $book-title-color: #111;
 
