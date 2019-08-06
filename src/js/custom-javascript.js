@@ -238,16 +238,35 @@ jQuery(document).ready(function($) {
 
   // responsive
   function checkPosition() {
-    if (window.matchMedia("(max-width: 767px)").matches) {
+    if (window.matchMedia("(max-width: 800px)").matches) {
       //...
-      alert("Mobile warning");
+      // search icon and search bar toggle start
+      $(".cross-icon").addClass("close");
+      $(".site-search").hide();
+      $(".mobile-search-icon").click(function() {
+        $(".site-search").toggle();
+        if ($(".cross-icon").hasClass("close")) {
+          $(".cross-icon")
+            .removeClass("close")
+            .addClass("open");
+          $(".search-icon")
+            .addClass("close")
+            .removeClass("open");
+        } else {
+          $(".cross-icon")
+            .addClass("close")
+            .removeClass("open");
+          $(".search-icon")
+            .removeClass("close")
+            .addClass("open");
+        }
+      });
+      // search icon and search bar toggle finish
     } else {
       //...
     }
   }
-  // checkPosition();
 
-  $(".mobile-search-icon").click(function() {
-    $(".site-search").toggleClass("toggle-search-form");
-  });
+  checkPosition();
+  // Toggle mobile search icon
 });

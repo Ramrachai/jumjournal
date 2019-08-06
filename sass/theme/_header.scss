@@ -133,12 +133,48 @@ svg#Layer_1 {
   position: absolute;
   left: 25px;
   top: 10px;
-  padding: 4px 22px;
+  padding: 4px 8px;
+  &:active,
+  &:focus,
+  &:hover {
+    color: $white2;
+  }
 }
 .toggle-search-form {
   right: -65px !important ;
-  transition: right 0.5s;
 }
+.close {
+  display: none;
+}
+.open {
+  display: block;
+}
+
+.search-icon {
+  padding: 7px 12px;
+  font-size: 18px;
+  margin-top: -4px;
+}
+.cross-icon {
+  position: absolute;
+  top: 2px;
+  font-size: 23px;
+  background: #e0e0e0;
+  padding: 6px 10px 20px 10px;
+  color: #3c3c3c;
+}
+
+.cross-icon:after {
+  content: "";
+  position: absolute;
+  height: 50px;
+  width: 390px;
+  background: #e0e0e0;
+  top: 100%;
+  right: -90px;
+  z-index: 1;
+}
+
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
   .modal .site-search {
@@ -170,9 +206,12 @@ svg#Layer_1 {
 }
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .show-on-mobile {
     display: block;
+  }
+  .hide-on-mobile {
+    display: none;
   }
 
   #site-div-nav {
@@ -181,10 +220,10 @@ svg#Layer_1 {
   .site-search {
     position: absolute;
     width: 400px;
-    right: -500px;
-    top: 50px;
+    right: -59px;
+    top: 128%;
     max-width: 340px;
-    transition: right 0.5s;
+    z-index: 2;
   }
   .site-search select {
     width: 65px;
@@ -199,9 +238,12 @@ svg#Layer_1 {
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
   .hide-on-pc {
     display: none;
+  }
+  .show-on-pc {
+    display: blockk;
   }
 }
 

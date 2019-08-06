@@ -620,9 +620,10 @@ $container = get_theme_mod( 'understrap_container_type' );
         </div>
         <div class="col-2 col-md-5 col-lg-5">
           <div class="show-on-mobile hide-on-pc">
-            <button class = 'mobile-search-icon'>
-              <i class='fa fa-search'></i>
-            </button>
+            <a href ='#' class = 'mobile-search-icon'>
+              <i class='search-icon fa fa-search'></i>
+              <i class='cross-icon fa fa-close '></i>              
+            </a>
           </div>
           <div class="site-search ">
             <?php get_search_form(); ?>
