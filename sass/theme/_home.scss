@@ -22,7 +22,7 @@
   height: 550px;
   color: $white2;
   .heading {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
     // line-height: 1;
     letter-spacing: 0.125rem;
@@ -36,6 +36,7 @@
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-size: 1.125rem;
+    text-align:justify;
     padding: 0;
     padding-bottom: 20px;
     // letter-spacing: 0;
@@ -230,6 +231,15 @@
 }
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
+  .jumjournal-hero {
+    a {
+      display:inline;
+    }
+    .btn-btn {
+      margin-left:1rem;
+    }
+
+  }
   .nav-box {
     
     display: flex;
