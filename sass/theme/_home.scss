@@ -238,6 +238,15 @@
     .btn-btn {
       margin-left:1rem;
     }
+    .jumjournal-hero.page-header {
+      .moto {
+        padding-left:0.8rem;
+      }
+    }
+    .site-btn{
+      padding:9px 22px;
+    }
+    
 
   }
   .nav-box {
@@ -251,6 +260,9 @@
   .frame-text.three {
     margin-top: -1rem;
   }
+  .jumjournal-hero.page-header .heading {
+    padding-left: 7px;
+ }
 }
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 991.98px) {
