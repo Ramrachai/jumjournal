@@ -54,7 +54,7 @@
   box-shadow: $dp4;
   display: flex;
   flex-direction: column;
-  align-itrems: center;
+  align-items: center;
   justify-content: center;
   color: $grey;
   border-radius: 0.25rem;
@@ -230,6 +230,14 @@
 }
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
+  .nav-box {
+    
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
   .frame-text.three {
     margin-top: -1rem;
   }

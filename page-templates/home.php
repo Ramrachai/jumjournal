@@ -44,18 +44,21 @@ $container = get_theme_mod( 'understrap_container_type' );
       <div class="row">
         <div class="col-md-12">
           <div class="content-inner center">
-            <a class="nav-box-link" href="<?php echo esc_url( home_url( '/' ) ); ?>bangla-blog">
-              <div class="nav-box">
-                <i class="fas fa-file-alt"></i>
-                <span>Bangla blog</span>
-              </div>
-            </a>
-            <a class="nav-box-link" href="<?php echo esc_url( home_url( '/' ) ); ?>english-blog">
-              <div class="nav-box">
-                <i class="far fa-file-alt"></i>
-                <span>English blog</span>
-              </div>
-            </a>
+              <a class="nav-box-link " href="<?php echo esc_url( home_url( '/' ) ); ?>bangla-blog">
+                <div class="nav-box">
+                  <i class="fas fa-file-alt"></i>
+                  <span>Bangla blog</span>
+                </div>
+              </a>
+            
+            
+              <a class="nav-box-link " href="<?php echo esc_url( home_url( '/' ) ); ?>english-blog">
+                <div class="nav-box">
+                  <i class="far fa-file-alt"></i>
+                  <span>English blog</span>
+                </div>
+              </a>
+            
             <a class="nav-box-link" href="<?php echo esc_url( home_url( '/' ) ); ?>photo-gallery">
               <div class="nav-box">
                 <i class="fas fa-camera-retro"></i>

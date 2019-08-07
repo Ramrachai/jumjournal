@@ -363,6 +363,18 @@ audio {
 }
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
+  .content-inner {
+    flex-direction: row;
+    flex-wrap: wrap;
+    // width: 100%;
+    &.center {
+      text-align: center;
+      top:10px;
+      margin-bottom: 2rem;
+      padding-left: 1.4rem;
+      
+    }
+  }
 }
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 991.98px) {
