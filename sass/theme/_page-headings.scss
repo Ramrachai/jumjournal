@@ -1,7 +1,7 @@
 .page-header {
   // background-color: $primary-light;
   color: $white;
-  padding: 3rem 0;
+  // padding: 3rem 0;
 
   // when with-bg available for background image
   &.with-bg {
@@ -20,7 +20,7 @@
     letter-spacing: 0.25rem;
 
     padding-bottom: 1rem;
-    
+
     // margin-bottom: 1.5rem;
   }
 
@@ -31,9 +31,6 @@
     font-size: 1.125rem;
     letter-spacing: 0.375rem;
     width: 65%;
-  }
-  #fav {
-    bottom: -4rem;
   }
 }
 .page-header.type-two {
@@ -145,7 +142,7 @@
 // Bellow 576px
 @media (max-width: 575.98px) {
   .page-header {
-    padding: 2rem 1.5rem;
+    // padding: 2rem 1.5rem;
     .heading {
       font-size: 1.25rem;
       font-weight: 500;
@@ -167,7 +164,7 @@
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
   .page-header {
-    padding: 1.5rem 1.5rem;
+    // padding: 1.5rem 1.5rem;
     .heading {
       font-size: 1.5rem;
       font-weight: 500;
@@ -190,16 +187,16 @@
 }
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
-  .page-header{
-    .heading{
+  .page-header {
+    .heading {
       border-bottom: 4px solid #eee;
       margin-left: 3px;
     }
   }
   .page-header.type-three {
     .moto {
-     padding-left: 0.8rem;
-     font-size: 15px;
+      padding-left: 0.8rem;
+      font-size: 15px;
     }
   }
 }

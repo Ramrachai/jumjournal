@@ -22,7 +22,7 @@ $container = get_theme_mod( 'understrap_container_type' );
             <div class="leader">
               <!-- <img src="<?php echo get_template_directory_uri(); ?>/images/cht.jpg" alt="Leader" class="img-responsive"> -->
             </div>
-            
+            <div class="empty-space-50 hide-on-mobile"></div>
             <h1 class="heading">Leave No one behind</h1>
             <h3 class="moto">Jumjournal is an leading online community and archive based on Chittagong Hill Tracts raising voice of marginalized people to reach across the whole world. It’s an amazing platform to share and explore new ideas and thoughts representing diverse views of diverse people from different communities. </h3>
             <div class="btn-btn">

@@ -16,12 +16,14 @@
     }
   }
 }
+
 .jumjournal-hero.page-header {
   // padding-top: 2rem;
   background: $white;
   height: 550px;
   color: $white2;
   .heading {
+    padding: 50px 10px 5px 10px;
     font-size: 1.5rem;
     font-weight: 700;
     // line-height: 1;
@@ -36,7 +38,7 @@
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-size: 1.125rem;
-    text-align:justify;
+    text-align: justify;
     padding: 0;
     padding-bottom: 20px;
     // letter-spacing: 0;
@@ -170,10 +172,7 @@
   .jumjournal-hero .leader img {
     height: 200px;
   }
-  .jumjournal-hero.page-header .heading {
-    padding-left: 0;
-    padding-right: 0;
-  }
+
   .jumjournal-hero.page-header .moto {
     width: 95%;
   }
@@ -233,36 +232,30 @@
 @media (max-width: 575.98px) {
   .jumjournal-hero {
     a {
-      display:inline;
+      display: inline;
     }
     .btn-btn {
-      margin-left:1rem;
+      margin-left: 1rem;
     }
     .jumjournal-hero.page-header {
       .moto {
-        padding-left:0.8rem;
+        padding-left: 0.8rem;
       }
     }
-    .site-btn{
-      padding:9px 22px;
+    .site-btn {
+      padding: 9px 22px;
     }
-    
-
   }
   .nav-box {
-    
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    // display: flex;
+    // flex-direction:column;
+    // align-items: center;
+    // justify-content: center;
+    // flex-wrap: wrap;
   }
   .frame-text.three {
     margin-top: -1rem;
   }
-  .jumjournal-hero.page-header .heading {
-    padding-left: 7px;
- }
 }
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 991.98px) {

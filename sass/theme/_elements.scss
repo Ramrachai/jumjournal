@@ -1,10 +1,10 @@
 // Content classes
 .content-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  position: relative;
-  top: 50%;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: flex-start;
+  // position: relative;
+  // top: 50%;
   // width: 100%;
   &.center {
     text-align: center;
@@ -58,7 +58,7 @@
   position: absolute;
   z-index: 9;
   left: 50%;
-  bottom: -100% !important;
+  bottom: -62%;
   text-align: center;
   margin-left: -1rem;
   cursor: pointer;
@@ -252,6 +252,26 @@
     border-left-color: $color-eight-dark;
   }
 }
+.empty-space-100 {
+  height: 0;
+  width: 0;
+  padding: 100px;
+}
+.empty-space-50 {
+  height: 0;
+  width: 0;
+  padding: 50px;
+}
+.empty-space-20 {
+  height: 0;
+  width: 0;
+  padding: 20px;
+}
+.empty-space-10 {
+  height: 0;
+  width: 0;
+  padding: 10px;
+}
 
 // Section itrem: Support center
 .section-item {
@@ -343,9 +363,9 @@ audio {
 }
 
 // Small devices (landscape phones, less than 768px)
-@media (max-width: 767.98px) {
-  .page-header #fav {
-    bottom: -7.5rem !important;
+@media only screen and (max-width: 767.98px) {
+  #fav {
+    top: 134%;
   }
   .text-content.type-one {
     padding-left: 1.25rem;
@@ -364,15 +384,13 @@ audio {
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
   .content-inner {
-    flex-direction: row;
-    flex-wrap: wrap;
+    // flex-direction: row;
+    // flex-wrap: wrap;
     // width: 100%;
     &.center {
       text-align: center;
-      top:10px;
+      top: 10px;
       margin-bottom: 2rem;
-      padding-left: 1.4rem;
-      
     }
   }
 }
