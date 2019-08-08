@@ -18,9 +18,8 @@
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 0.25rem;
-
+    border-bottom: 1px solid #eee;
     padding-bottom: 1rem;
-    
     // margin-bottom: 1.5rem;
   }
 
@@ -190,18 +189,6 @@
 }
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
-  .page-header{
-    .heading{
-      border-bottom: 4px solid #eee;
-      margin-left: 3px;
-    }
-  }
-  .page-header.type-three {
-    .moto {
-     padding-left: 0.8rem;
-     font-size: 15px;
-    }
-  }
 }
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 991.98px) {
