@@ -253,7 +253,7 @@
 .mobile-sidebar.right {
   box-shadow: -1px 0 2px 0 $primary-light;
   right: -300px;
-  width: 60%;
+  width: 60% !important;
   transition: 0.5s;
 
   // Right menu adjustment
