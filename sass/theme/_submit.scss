@@ -10,7 +10,8 @@
       background-color: $white;
     }
   }
-  .nav-link.active, .nav-itrem.show .nav-link {
+  .nav-link.active,
+  .nav-itrem.show .nav-link {
     color: $primary;
     opacity: $opacity;
     background-color: $white;
@@ -28,18 +29,21 @@
       margin-right: 0.375rem;
     }
   }
-  .nav-tabs, .nav-link {
+  .nav-tabs,
+  .nav-link {
     background-color: $field-bg;
   }
-
 }
 .form-field {
   margin-bottom: 1rem;
-  input, textarea {
+  input,
+  textarea {
     border: none;
     display: inline-block;
   }
-  input[type="text"], input[type="file"], textarea {
+  input[type="text"],
+  input[type="file"],
+  textarea {
     padding: 1rem 3.5rem 1rem 2rem;
     background-color: $field-bg;
     max-width: 100%;
@@ -47,16 +51,17 @@
   input[type="file"] {
     width: 100%;
   }
-
 }
 // width adjustment
 .hafl-half {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .form-field {
-  &.full, input[type="text"], textarea {
+  &.full,
+  input[type="text"],
+  textarea {
     width: 100%;
   }
   &.half {
@@ -83,7 +88,7 @@
     top: -1.125rem;
     background-color: $grey;
     height: 90px;
-    display:none;
+    display: none;
     width: 200px;
     color: $white;
     padding: 1rem;
@@ -134,23 +139,24 @@
 // Submit btn
 .submit-data {
   border: 0;
-  font-size: .85rem;
+  font-size: 0.85rem;
   color: $white;
   text-transform: uppercase;
   font-weight: 500;
   background-color: $grey;
   padding: 1rem 2rem;
-  border-radius: .25rem;
-  box-shadow: 0 0 .25rem $primary-light;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0.25rem $primary-light;
   cursor: pointer;
-  letter-spacing: .125rem;
+  letter-spacing: 0.125rem;
   opacity: $opacity;
 
   i {
-    margin-right: .5rem;
+    margin-right: 0.5rem;
   }
 
-  &:focus, &:hover {
+  &:focus,
+  &:hover {
     opacity: $no-opacity;
   }
 }
@@ -167,7 +173,7 @@ form > .form-field:last-child {
       border: 0;
       height: 32px;
       font-size: 0.875rem;
-      font-family: 'Roboto', sans-serif;
+      font-family: "Roboto", sans-serif;
       font-weight: 500;
     }
     input[type="remail"] {
@@ -175,7 +181,8 @@ form > .form-field:last-child {
       border-radius: 2px 0 0 2px;
       padding: 0 1rem;
       font-size: 0.875rem;
-      &:focus, &:hover {
+      &:focus,
+      &:hover {
         border: 0;
       }
     }
@@ -185,15 +192,14 @@ form > .form-field:last-child {
       margin-left: -4px;
       text-transform: uppercase;
       border-radius: 0 2px 2px 0;
-      color: $primary-light;
-      padding: 0 .75rem;
+      color: $grey2;
+      padding: 0 0.75rem;
     }
   }
 }
-.hide-show{
-  display:block;
+.hide-show {
+  display: block;
 }
-
 
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
@@ -218,13 +224,10 @@ form > .form-field:last-child {
 }
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
-
 }
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 991.98px) {
-
 }
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) and (max-width: 1199.98px) {
-
 }
