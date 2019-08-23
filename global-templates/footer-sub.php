@@ -19,16 +19,12 @@
 
         <div class="col-md-4">
           <div class="widget-sub">
-            <h3 class="widget-sub-title">
-              Jumjournal Organization
-            </h3>
-            <p>Find more information at <a href="">www.jumjournal.org</a></p>
-            <img src="<?php echo get_template_directory_uri(); ?>/images/jumjournal-org.png" alt="Org" class="img-responsive">
+
           </div>
         </div>
 
         <div class="col-md-4">
-          <div class="widget-sub">
+          <div class="widget-sub newslatter">
             <h3 class="widget-sub-title">
               Sign up for the newsletter
             </h3>

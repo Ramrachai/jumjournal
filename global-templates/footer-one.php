@@ -15,20 +15,23 @@ $container = get_theme_mod( 'understrap_container_type' );
   <div class="footer type-one">
     <div class="<?php echo esc_attr( $container ); ?>">
       <div class="row">
-
-        <?php if ( is_active_sidebar( 'footerfull' ) ) : ?>
-          <?php dynamic_sidebar( 'footerfull' ); ?>
-        <?php endif; ?>
-
-        <div class="col-md-12">
-          <div class="content-inner center copyright">
-            
-            <p>&copy; 2017-<?php echo get_the_date('Y'); ?> Jumjournal</p>
+        
+          <?php if ( is_active_sidebar( 'footerfull' ) ) : ?>
+            <?php dynamic_sidebar( 'footerfull' ); ?>
+          <?php endif; ?>
+        
+      </div> <!-- row finish -->
+    </div> <!-- container finish -->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+        <div class="content-inner center copyright">
+            <p>&copy; Copyright | 2017-<?php echo get_the_date('Y'); ?> Jumjournal | All right reserved.</p>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </div> <!-- footer type-one finish -->
   <!--.footer-->
 
   <div id="support-center" class="support-center">
