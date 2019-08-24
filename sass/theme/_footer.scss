@@ -30,7 +30,7 @@
       padding: 5px 0;
       display: block;
       text-align: left;
-      transition: all 0.5s ease-in-out;
+      transition: all 0.3s ease-in-out;
       &:hover {
         color: $grey;
       }
@@ -130,70 +130,6 @@
 @media (min-width: 992px) and (max-width: 1199.98px) {
 }
 
-/* ************ Footer start ******************** */
-
-// .footer-wrap .footer-top {
-//   background: #055842;
-//   padding: 40px 0;
-// }
-// .footer-wrap .footer-bottom {
-//   background: #024936;
-//   padding: 55px 0 8px 0;
-// }
-
-// .footer-wrap .copyright {
-//   padding-top: 35px;
-//   text-align: center;
-// }
-// .footer-wrap .copyright span {
-//   color: #bfbfbf;
-//   display: inline-block;
-//   padding-top: 25px;
-//   /* margin-top: 50px;*/
-//   font-size: 13px;
-// }
-// .footer-top h3 {
-//   font-size: 16px;
-//   line-height: 25px;
-//   font-weight: 700;
-//   margin-bottom: 20px;
-// }
-// .footer-info-box {
-//   font-size: 14px;
-//   line-height: 20px;
-// }
-// .footer-info-box a {
-//   color: #fff;
-// }
-
-// .footer-info-box .info-box-bottom svg {
-//   font-size: 2.2rem;
-// }
-// .footer-info-box .social-icon-wrap a {
-//   margin-right: 18px;
-// }
-// .footer-info-box .footer-logo {
-//   padding-top: 48px;
-// }
-// .footer-wrap .inputbox input[type="text"] {
-//   height: 40px;
-//   line-height: 40px;
-//   padding: 0 10px;
-//   border-radius: 3px 0 0 3px;
-//   border: none;
-//   float: left;
-// }
-// .footer-wrap .inputbox .btn-submit {
-//   height: 40px;
-//   border-radius: 0 3px 3px 0;
-//   border: none;
-//   line-height: 40px;
-//   font-size: 15px;
-//   color: #00c08d;
-//   font-weight: 700;
-//   padding: 0 10px;
-// }
-
 .footer-widget h3 {
   font-size: 20px;
   line-height: 25px;
@@ -204,17 +140,6 @@
   margin-bottom: 20px;
   display: inline-block;
 }
-// .footer-menu ul li a {
-//   color: #fff;
-//   font-size: 13px;
-//   line-height: 1;
-//   padding: 5px 0;
-//   display: block;
-// }
-// .footer-menu ul li.current-menu-item a,
-// .footer-menu ul li a:hover {
-//   color: #5a9182;
-// }
 
 .footer-sub .widget-sub.newslatter {
   h3,

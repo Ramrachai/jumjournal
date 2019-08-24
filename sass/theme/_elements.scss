@@ -94,8 +94,17 @@
     box-shadow: $dp8;
   }
   &.white {
-    background-color: $site-btn-white;
-    color: $primary-light;
+    // background-color: $site-btn-white;
+    border: 1px solid $logo-color;
+    color: $white;
+    transition: all 0.3s;
+    background: $logo-color;
+
+    &:hover {
+      color: $dark;
+      background: $white;
+      border: 1px solid $white;
+    }
   }
 }
 
