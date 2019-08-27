@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display&display=swap");
+
 .jumjournal-hero {
   // background-image: url("../images/hero-image-1x.jpg");
 
@@ -168,6 +170,80 @@
   right: 4rem;
 }
 
+// description sectin start
+
+.description {
+  background: #fff;
+  padding: 20px 0;
+  position: relative;
+
+  #green-bar1 {
+    position: absolute;
+    left: -8px;
+    height: 10%;
+    width: auto;
+  }
+
+  .description-left-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .description-left {
+    color: $grey;
+
+    h2 {
+      font-size: 32px;
+      letter-spacing: 3px;
+      margin-bottom: 15px;
+    }
+    span {
+      font-size: 2.3rem;
+      background: linear-gradient(300deg, #00c08d, #7ed563);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      // font-style: italic;
+      font-family: "Playfair Display", serif;
+    }
+    p {
+      text-align: justify;
+    }
+  }
+  .description-right {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+    .single-description {
+      padding: 5% 8%;
+      box-shadow: inset 2px 0px 15px rgba(0, 0, 0, 0.15);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      align-content: center;
+      i {
+        font-size: 2.3rem;
+        background: linear-gradient(300deg, #00c08d, #7ed563);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin: 15px 0;
+      }
+      h2,
+      p {
+        text-align: center;
+        color: $grey;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 14px;
+      }
+    } // single-description finish
+  } // description right finish
+} //description finish
+
+// features section start
 .particles-container {
   display: flex;
   flex-direction: row;
@@ -185,7 +261,7 @@
   }
 }
 .feature-container {
-  background-color: $white;
+  background-color: #82aebf7a;
   position: relative;
   height: 110vh;
   background-image: url("https://jumtech.net/image/original.svg");
@@ -277,7 +353,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(90deg, $logo-color, rgb(35, 219, 44));
+  background: linear-gradient(-30deg, #19da99, #7ed563);
   color: $white;
   font-size: 24px;
   position: relative;
