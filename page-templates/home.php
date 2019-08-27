@@ -89,44 +89,67 @@ $container = get_theme_mod( 'understrap_container_type' );
     </div>
   </div><!--.home-nav-box-->
 
-  <div class="site-features">
-    <div class="<?php echo esc_attr( $container ); ?>">
+<div class="feature-text">
+  <h2>More from Jumjournal </h2>
+</div>
+
+  <div class="feature-container" >
+
+    <div class="particles-container">
+        
+        <div id="particles1-js"></div>
+        <div id="particles2-js"></div>
+        <div id="particles3-js"></div>
+        <div id="particles4-js"></div>
+        <div id="particles5-js"></div>
+        <div id="particles6-js"></div>
+        <div id="particles7-js"></div>
+        <div id="particles8-js"></div>
+        <div id="particles9-js"></div>
+        <div id="particles10-js"></div>
+        <div id="particles11-js"></div>
+        <div id="particles12-js"></div>
+        
+    </div>
+    
+    <div class="container all-features" id = 'features'>
       <div class="row">
-        <div class="col-md-12">
-          <div class="frame-design">
-            <div class="frame-text one">
-              <h2>
-                Learn
-              </h2>
-              <p>
-                Let’s explore what’s on Jumjournal.There are lot's of stuff regarding our  own history, culture, people,lifestyle and struggle.
-              </p>
-            </div>
-            <div class="frame-text two">
-              <h2>
-                Entertain
-              </h2>
-              <p>
-                Let's make it even better. Jumjournal is comitted to build a great platform of online resources.Be a part of this initiative.
-              </p>
-            </div>
-            <div class="frame-text three">
-              <h2>
-                Contribute
-              </h2>
-              <p>
-                Feel Your  Identity. Photos, videos and musics are organized at one place to enjoy and feel them even more better.
-              </p>
-            </div>
+        <div class="col-12 features">
 
+        <!-- learn -->
+          <div class="learn">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>Learn</h3>
+            <p>Let’s explore what’s on Jumjournal.There are lot's of stuff regarding our own history, culture, people,lifestyle and struggle.</p>
+            <a href="#" class ='btn btn-default  '>Learn More</a>
           </div>
+        <!-- learn -->
 
-          <div class="daba"></div>
+        <!-- Entertainment -->
+        <div class="entertainment">
+        <i class="fa fa-music"></i>
+            <h3>Entertainment</h3>
+            <p>Feel Your Identity. Photos, videos and musics are organized at one place to enjoy and feel them even more better.</p>
+            <a href="#" class ='btn btn-default '>Learn More</a>
+          </div>
+        <!-- Entertainment -->
+
+        <!-- Contribute -->
+        <div class="contribute">
+        <i class="fas fa-hands-helping"></i>
+            <h3>Contribute</h3>
+            <p>Let's make it even better. Jumjournal is comitted to build a great platform of online resources.Be a part of this initiative.</p>
+            <a href="#" class ='btn btn-default '>Learn More</a>
+          </div>
+        <!-- Contribute -->
+
 
         </div>
       </div>
     </div>
   </div>
+
+ 
 
 <?php get_template_part('global-templates/footer-sub'); ?>
 <?php get_template_part('global-templates/footer-one'); ?>

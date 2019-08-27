@@ -94,12 +94,13 @@
 
 // Site Features
 .site-features {
-  background-image: url(../images/lake-bg-1x.jpg);
+  // background-image: url(../images/lake-bg-1x.jpg);
   background-position: center;
   background-size: cover;
   padding: 3rem 0;
   text-align: center;
   position: relative;
+  height: 80vh;
 
   .frame-design {
     background-image: url(../images/hcircles-1x.png);
@@ -165,6 +166,163 @@
   z-index: 9;
   bottom: -3.375rem;
   right: 4rem;
+}
+
+.particles-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  height: 100vh;
+
+  div {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+  }
+}
+.feature-container {
+  background-color: $white;
+  position: relative;
+  height: 110vh;
+  background-image: url("https://jumtech.net/image/original.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.all-features {
+  position: absolute;
+  top: 50%;
+  display: block;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.features {
+  display: flex;
+  flex-direction: row;
+  padding: 40px 0;
+  position: relative;
+  height: 100vh;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+
+  // justify-content: center;
+  // align-content: center;
+  // height: 80vh;
+  div {
+    height: 70vh;
+    border: 5px solid #e9ecef;
+    background: #f8f9fa;
+    padding: 20px;
+    margin: 0 20px;
+    width: 30%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+    transition: all 0.3s;
+    i {
+      display: block;
+      font-size: 65px;
+      text-align: center;
+      margin-bottom: 20px;
+      color: $grey;
+      transition: all 0.3s;
+    }
+
+    h3 {
+      // background: linear-gradient(90deg, #00c08d, #b0f920);
+      padding: 4px 10px;
+      color: $dark;
+      text-align: center;
+      transition: all 0.3s;
+    }
+    p {
+      padding: 4px 10px;
+      text-align: center;
+      transition: all 0.3s;
+    }
+    a {
+      display: block;
+      background-color: $grey;
+      color: $white;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+
+    &:hover,
+    &:hover i,
+    &:hover h3 {
+      cursor: pointer;
+      color: $logo-color;
+    }
+    &:hover a {
+      background-color: $logo-color;
+    }
+    &:hover {
+      border-color: $logo-color;
+      box-shadow: 4px 8px 4px #2f2f2f45;
+    }
+  }
+}
+
+.feature-text {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, $logo-color, rgb(35, 219, 44));
+  color: $white;
+  font-size: 24px;
+  position: relative;
+  h2 {
+  }
+}
+.bounce {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+  animation-duration: 1.2s;
+  // animation-iteration-count: infinite;
+}
+@keyframes bounce {
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%,
+  43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0);
+  }
 }
 
 // Small devices (landscape phones, less than 768px)

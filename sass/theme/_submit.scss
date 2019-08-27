@@ -187,13 +187,19 @@ form > .form-field:last-child {
       }
     }
     input[type="submit"] {
-      background-color: $ef;
+      background-color: $grey2;
       cursor: pointer;
       margin-left: -4px;
       text-transform: uppercase;
       border-radius: 0 2px 2px 0;
-      color: $grey2;
+      color: $white;
       padding: 0 0.75rem;
+      transition: all 0.3s;
+      &:hover,
+      &:active &:focus {
+        color: $white;
+        background-color: $grey3;
+      }
     }
   }
 }
