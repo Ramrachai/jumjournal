@@ -5,6 +5,10 @@
   background: white;
   height: calc(100vh - 70px);
   color: $black;
+  background-image: url("../images/hero-abstract1.svg");
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
   .heading-container {
     margin-top: 25%;
     text-transform: uppercase;
@@ -29,17 +33,20 @@
     }
   }
 
-  .hero-img-container {
-    // width: 70%;
-    // display: block;
-    // margin: 0 auto;
+  .hero-img-container img {
+    width: 100%;
+    height: auto;
+    padding-top: 8%;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .jumjournal-hero {
+    // background-position: 80% 50%;
+    background-image: none;
     .heading-container {
-      margin-top: 15%;
+      position: absolute;
+      transform: translateY(110%);
       h1 {
         font-size: 28px;
         margin-bottom: 12px;
@@ -127,9 +134,11 @@
 
   #green-bar1 {
     position: absolute;
-    left: -8px;
+    left: 6%;
     height: 10%;
     width: auto;
+    transform: rotate(90deg);
+    top: 23px;
   }
 
   .description-left-container {
@@ -191,9 +200,37 @@
       }
     } // single-description finish
   } // description right finish
-} //description finish
+}
+
+@media only screen and (max-width: 768px) {
+  .description {
+    padding-bottom: 50px;
+    .description-left {
+      margin-bottom: 20px;
+    }
+    .description-right {
+      display: grid;
+      grid-template-columns: auto;
+      padding-left: 0;
+    } // description right finish
+  }
+}
+
+//description finish
 
 // features section start
+.feature-text {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-30deg, #19da99, #7ed563);
+  color: $white;
+  font-size: 24px;
+  position: relative;
+}
+
 .particles-container {
   display: flex;
   flex-direction: row;
@@ -236,9 +273,6 @@
   align-content: center;
   align-items: center;
 
-  // justify-content: center;
-  // align-content: center;
-  // height: 80vh;
   div {
     height: 70vh;
     border: 3px solid #e9ecef;
@@ -262,7 +296,6 @@
     }
 
     h3 {
-      // background: linear-gradient(90deg, #00c08d, #b0f920);
       padding: 4px 10px;
       color: $dark;
       text-align: center;
@@ -297,20 +330,38 @@
   }
 }
 
-.feature-text {
-  padding: 20px 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(-30deg, #19da99, #7ed563);
-  color: $white;
-  font-size: 24px;
-  position: relative;
-  h2 {
+@media only screen and (max-width: 768px) {
+  .feature-container {
+    height: auto;
+  }
+  .all-features {
+    position: relative;
+    top: auto;
+    display: block;
+    left: auto;
+    transform: translate(0);
+  }
+  .features {
+    flex-direction: column;
+    height: auto;
+    div {
+      width: 90%;
+      position: relative;
+      margin-bottom: 10px;
+      height: auto;
+      i {
+        font-size: 36px;
+      }
+
+      h3 {
+        font-size: 20px;
+      }
+    }
   }
 }
+// === feature section finish
 
+// submit section start
 section.file-submit {
   height: 60vh;
   width: 100%;
@@ -369,7 +420,7 @@ section.file-submit:after {
 }
 .home-btn {
   background: linear-gradient(90deg, #00c08d, #7ed563);
-  padding: 12px 30px;
+  padding: 10px 26px;
   border-radius: 50px;
   color: #fff;
   text-transform: uppercase;
@@ -380,7 +431,22 @@ section.file-submit:after {
     background: linear-gradient(90deg, #7ed563, #00c08d);
   }
 }
-
+@media only screen and (max-width: 768px) {
+  .file-submit-container {
+    max-width: 100%;
+    padding: 50px 20px;
+    h2 {
+      font-size: 22px;
+    }
+    .submit-btn-container {
+      height: 60px;
+      width: 80%;
+      a {
+        font-size: 12px;
+      }
+    }
+  }
+}
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
   .footer-sub.social .widget-sub {

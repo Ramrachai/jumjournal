@@ -33,7 +33,7 @@ $container = get_theme_mod( 'understrap_container_type' );
         </div>
         <div class="col-md-6 col-12">
           <div class="hero-img-container">
-            <img class = 'img-fluid' src="<?php echo get_template_directory_uri().'/images/hero-bg.png' ?>" alt="">
+            <img class = 'img-fluid' src="<?php echo get_template_directory_uri().'/images/hero-bg.svg' ?>" alt="">
           </div>
         </div>
       </div>
@@ -95,7 +95,7 @@ $container = get_theme_mod( 'understrap_container_type' );
   </div><!--.home-nav-box-->
 
 <section class="description">
-  <div class="green-bars">
+  <div class="green-bars hide-on-mobile">
   <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="green-bar1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -211,7 +211,6 @@ $container = get_theme_mod( 'understrap_container_type' );
   <div class="container all-features" id = 'features'>
     <div class="row">
       <div class="col-12 features">
-
       <!-- learn -->
         <div class="learn">
           <i class="fas fa-graduation-cap"></i>

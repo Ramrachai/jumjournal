@@ -26,7 +26,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php wp_footer(); ?>
 
-<script src = "<?php echo get_template_directory_uri() . '/src/js/scrollmagic/featuresAnimation.js'?>"></script>
 
 
 

@@ -75,8 +75,9 @@
     p {
       font-size: 0.875rem;
     }
-    .platforms li {
-      display: inline-block;
+    .platforms {
+      display: flex;
+      flex-direction: row;
       a {
         margin-right: 1rem;
         font-size: 20px;
