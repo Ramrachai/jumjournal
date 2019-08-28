@@ -14,30 +14,35 @@ get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-	<div class="jumjournal-hero page-header type-three" style = "background: url('<?php echo get_template_directory_uri(); ?>/images/cht.jpg')">
-    <div class="<?php echo esc_attr( $container ); ?>">
+	<section class="jumjournal-hero">
+    <div class="container">
       <div class="row">
-        <div class="col-md-12">
-          <div class="content-inner">
-            <div class="leader">
-              <!-- <img src="<?php echo get_template_directory_uri(); ?>/images/cht.jpg" alt="Leader" class="img-responsive"> -->
-            </div>
-            <div class="empty-space-50 hide-on-mobile"></div>
-            <h1 class="heading">Leave No one behind</h1>
-            <h3 class="moto">Jumjournal is an leading online community and archive based on Chittagong Hill Tracts raising voice of marginalized people to reach across the whole world. It’s an amazing platform to share and explore new ideas and thoughts representing diverse views of diverse people from different communities. </h3>
-            <div class="btn-btn">
+        <div class="col-md-6 col-12  ">
+          <div class="heading-container">
+              <h1> 
+                <span> share </span>  
+                and 
+                <span> explore </span>
+              </h1>
+              <h3>new ideas and thoughts</h3>
+              <p>representing diverse views of diverse people </p>
               <a class="home-btn" href="<?php echo esc_url( home_url( '/' ) ); ?>Get-involved" >Get involved</a>
-              <!-- <a href="<?php // echo esc_url( home_url( '/' ) ); ?>submit" class="site-btn white">file Submit</!--> 
-            </div>
           </div>
-          <div id="fav" class="fav">
-            <a href="#target"><i class="fas fa-angle-down"></i></a>
+            
+          
+        </div>
+        <div class="col-md-6 col-12">
+          <div class="hero-img-container">
+            <img class = 'img-fluid' src="<?php echo get_template_directory_uri().'/images/hero-bg.png' ?>" alt="">
           </div>
-
         </div>
       </div>
     </div>
-  </div><!--.page-header-->
+
+    <div id="fav" class="fav bounce">
+        <a href="#target"><i class="fas fa-angle-down"></i></a>
+    </div>
+  </section><!--.hero section-->
 
   <div id="target" class="home-nav-box">
     <div class="<?php echo esc_attr( $container ); ?>">
