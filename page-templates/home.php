@@ -26,8 +26,8 @@ $container = get_theme_mod( 'understrap_container_type' );
             <h1 class="heading">Leave No one behind</h1>
             <h3 class="moto">Jumjournal is an leading online community and archive based on Chittagong Hill Tracts raising voice of marginalized people to reach across the whole world. It’s an amazing platform to share and explore new ideas and thoughts representing diverse views of diverse people from different communities. </h3>
             <div class="btn-btn">
-              <a class="site-btn white" href="<?php echo esc_url( home_url( '/' ) ); ?>Get-involved" >Get involved</a>
-              <a href="<?php echo esc_url( home_url( '/' ) ); ?>submit" class="site-btn white">file Submit</a>
+              <a class="home-btn" href="<?php echo esc_url( home_url( '/' ) ); ?>Get-involved" >Get involved</a>
+              <!-- <a href="<?php // echo esc_url( home_url( '/' ) ); ?>submit" class="site-btn white">file Submit</!--> 
             </div>
           </div>
           <div id="fav" class="fav">
@@ -97,7 +97,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	 width="210.4px" height="125.9px" viewBox="0 0 210.4 125.9" style="enable-background:new 0 0 210.4 125.9;" xml:space="preserve"
 	>
 <style type="text/css">
-	.st0{fill:url(#SVGID_1_);}
+	.barStroke{fill:url(#SVGID_1_);}
 </style>
 <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="32.6498" y1="1.3169" x2="151.5959" y2="133.593" gradientTransform="matrix(1 0 0 -1 0 126.7723)">
 	<stop  offset="0" style="stop-color:#00C08D"/>
@@ -105,7 +105,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<stop  offset="0.7722" style="stop-color:#66D16B"/>
 	<stop  offset="1" style="stop-color:#7ED563"/>
 </linearGradient>
-<path class="st0" d="M143.9,4.8L6.6,5.7V122l138.1-0.9c32.1-0.2,58-26.4,57.8-58.5C202.2,30.5,176,4.6,143.9,4.8z"/>
+<path class="barStroke" d="M143.9,4.8L6.6,5.7V122l138.1-0.9c32.1-0.2,58-26.4,57.8-58.5C202.2,30.5,176,4.6,143.9,4.8z"/>
 </svg>
 
 
@@ -184,61 +184,74 @@ $container = get_theme_mod( 'understrap_container_type' );
   <h2>More from Jumjournal </h2>
 </div>
 
-  <div class="feature-container" >
+<div class="feature-container" >
 
-    <div class="particles-container">
-        
-        <div id="particles1-js"></div>
-        <div id="particles2-js"></div>
-        <div id="particles3-js"></div>
-        <div id="particles4-js"></div>
-        <div id="particles5-js"></div>
-        <div id="particles6-js"></div>
-        <div id="particles7-js"></div>
-        <div id="particles8-js"></div>
-        <div id="particles9-js"></div>
-        <div id="particles10-js"></div>
-        <div id="particles11-js"></div>
-        <div id="particles12-js"></div>
-        
-    </div>
-    
-    <div class="container all-features" id = 'features'>
-      <div class="row">
-        <div class="col-12 features">
+  <div class="particles-container">
+      
+      <div id="particles1-js"></div>
+      <div id="particles2-js"></div>
+      <div id="particles3-js"></div>
+      <div id="particles4-js"></div>
+      <div id="particles5-js"></div>
+      <div id="particles6-js"></div>
+      <div id="particles7-js"></div>
+      <div id="particles8-js"></div>
+      <div id="particles9-js"></div>
+      <div id="particles10-js"></div>
+      <div id="particles11-js"></div>
+      <div id="particles12-js"></div>
+      
+  </div>
+  
+  <div class="container all-features" id = 'features'>
+    <div class="row">
+      <div class="col-12 features">
 
-        <!-- learn -->
-          <div class="learn">
-            <i class="fas fa-graduation-cap"></i>
-            <h3>Learn</h3>
-            <p>Let’s explore what’s on Jumjournal.There are lot's of stuff regarding our own history, culture, people,lifestyle and struggle.</p>
-            <a href="#" class ='btn btn-default  '>Learn More</a>
-          </div>
-        <!-- learn -->
-
-        <!-- Entertainment -->
-        <div class="entertainment">
-        <i class="fa fa-music"></i>
-            <h3>Entertainment</h3>
-            <p>Feel Your Identity. Photos, videos and musics are organized at one place to enjoy and feel them even more better.</p>
-            <a href="#" class ='btn btn-default '>Learn More</a>
-          </div>
-        <!-- Entertainment -->
-
-        <!-- Contribute -->
-        <div class="contribute">
-        <i class="fas fa-hands-helping"></i>
-            <h3>Contribute</h3>
-            <p>Let's make it even better. Jumjournal is comitted to build a great platform of online resources.Be a part of this initiative.</p>
-            <a href="#" class ='btn btn-default '>Learn More</a>
-          </div>
-        <!-- Contribute -->
-
-
+      <!-- learn -->
+        <div class="learn">
+          <i class="fas fa-graduation-cap"></i>
+          <h3>Learn</h3>
+          <p>Let’s explore what’s on Jumjournal.There are lot's of stuff regarding our own history, culture, people,lifestyle and struggle.</p>
+          <a href="#" class ='btn home-btn  '>Learn More</a>
         </div>
+      <!-- learn -->
+
+      <!-- Entertainment -->
+      <div class="entertainment">
+      <i class="fa fa-music"></i>
+          <h3>Entertainment</h3>
+          <p>Feel Your Identity. Photos, videos and musics are organized at one place to enjoy and feel them even more better.</p>
+          <a href="#" class ='btn home-btn '>Learn More</a>
+        </div>
+      <!-- Entertainment -->
+
+      <!-- Contribute -->
+      <div class="contribute">
+      <i class="fas fa-hands-helping"></i>
+          <h3>Contribute</h3>
+          <p>Let's make it even better. Jumjournal is comitted to build a great platform of online resources.Be a part of this initiative.</p>
+          <a href="#" class ='btn home-btn '>Learn More</a>
+        </div>
+      <!-- Contribute -->
+
+
       </div>
     </div>
   </div>
+</div>
+
+
+<section class = 'file-submit'>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 file-submit-container">
+        <h2>Submit your files</h2>
+        <p>Your small contribution can play very important role to sustainably conserve your culture for present and future generations. Get started today, be a part of jumjournal community  </p>
+        <div class='submit-btn-container'> <a href="#" class = 'home-btn'>File submit</a> </div>
+      </div>
+    </div>
+  </div>
+</section>
 
  
 

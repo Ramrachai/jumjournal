@@ -17,9 +17,11 @@
 // Header Navigations
 // Div Navigation
 .site-div-nav,
-.div-nav,
+.div-nav {
+  background: linear-gradient(90deg, #00c08d, #00c08d, #00c08d, #7ed563);
+}
 .div-nav-control {
-  background-color: $logo-color;
+  background: $logo-color;
 }
 .site-div-nav {
   height: 4px;

@@ -237,7 +237,7 @@ $container = get_theme_mod( 'understrap_container_type' );
            <!-- ============svg logo start========  -->
 				  <svg
       version="1.1"
-      id="Layer_1"
+      id="logo_svg"
       xmlns:x="&ns_extend;"
       xmlns:i="&ns_ai;"
       xmlns:graph="&ns_graphs;"
@@ -253,7 +253,7 @@ $container = get_theme_mod( 'understrap_container_type' );
     >
       <style type="text/css">
         .st0 {
-          fill: #41bb93;
+          fill: #00c08d ;
         }
         .st1 {
           fill: #f1f2f2;

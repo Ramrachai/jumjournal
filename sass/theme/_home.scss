@@ -360,6 +360,76 @@
   h2 {
   }
 }
+
+section.file-submit {
+  height: 60vh;
+  width: 100%;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+}
+section.file-submit:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url("https://jumtech.net/image/pattern-4.png") no-repeat center
+      bottom,
+    url("https://jumtech.net/image/submit-bg.svg") no-repeat top right;
+  z-index: -1;
+}
+.file-submit-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 50px;
+  h2 {
+    text-transform: uppercase;
+    color: $grey;
+    letter-spacing: 3px;
+  }
+  p {
+    color: $grey;
+    font-size: 14px;
+  }
+  .submit-btn-container {
+    position: relative;
+    margin-top: 40px;
+    background: whitesmoke;
+    height: 90px;
+    width: 70%;
+    border: 1px solid whitesmoke;
+    border-radius: 50px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+
+    a {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+.home-btn {
+  background: linear-gradient(90deg, #00c08d, #7ed563);
+  padding: 12px 30px;
+  border-radius: 50px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background 3s;
+  &:hover {
+    color: white;
+    background: linear-gradient(90deg, #7ed563, #00c08d);
+  }
+}
 .bounce {
   -webkit-animation-name: bounce;
   animation-name: bounce;
