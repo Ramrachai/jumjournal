@@ -26,7 +26,8 @@ function myFunction(mobileView) {
     var scale = new ScrollMagic.Scene({
       triggerElement: ".learn",
       triggerHook: 1,
-      duration: "38%"
+      duration: "100%",
+      offset: -120
     })
       .setTween(learnScale)
       .addTo(controller);
@@ -43,7 +44,8 @@ function myFunction(mobileView) {
     var scale = new ScrollMagic.Scene({
       triggerElement: ".entertainment",
       triggerHook: 1,
-      duration: "38%"
+      duration: "100%",
+      offset: -120
     })
       .setTween(entertainmentScale)
       .addTo(controller);
@@ -60,7 +62,8 @@ function myFunction(mobileView) {
     var scale = new ScrollMagic.Scene({
       triggerElement: ".contribute",
       triggerHook: 1,
-      duration: "38%"
+      duration: "100%",
+      offset: -120
     })
       .setTween(contributeScale)
       .addTo(controller);
@@ -80,7 +83,7 @@ function myFunction(mobileView) {
     var scale = new ScrollMagic.Scene({
       triggerElement: ".feature-container",
       triggerHook: 1,
-      duration: "100%"
+      duration: "100%",
     })
       .setTween(firstScrollScale)
       .addTo(controller);
