@@ -7,13 +7,11 @@
 // 1st and 2nd same as pc
 // 3rd) cards will move down
 
-// == mobile animation start ===
-
-function myFunction(mobileView) {
+function featureAnimation(mobileView) {
   if (mobileView.matches) {
     // hide particles on mobile
     document.querySelector(".particles-container").remove();
-
+    // == mobile view animation start ===
     //cards on scroll animation start
     var controller = new ScrollMagic.Controller();
     var learnScale = new TimelineMax();
@@ -23,17 +21,16 @@ function myFunction(mobileView) {
       })
 
       .to(".learn", 1, { scale: 1 });
-    var scale = new ScrollMagic.Scene({
+    var scale1 = new ScrollMagic.Scene({
       triggerElement: ".learn",
       triggerHook: 1,
-      duration: "100%",
+      duration: "80%",
       offset: -120
     })
       .setTween(learnScale)
       .addTo(controller);
 
     // learn finish
-    var controller = new ScrollMagic.Controller();
     var entertainmentScale = new TimelineMax();
     entertainmentScale
       .set(".entertainment", {
@@ -41,17 +38,16 @@ function myFunction(mobileView) {
       })
 
       .to(".entertainment", 1, { scale: 1 });
-    var scale = new ScrollMagic.Scene({
+    var scale2 = new ScrollMagic.Scene({
       triggerElement: ".entertainment",
       triggerHook: 1,
-      duration: "100%",
+      duration: "80%",
       offset: -120
     })
       .setTween(entertainmentScale)
       .addTo(controller);
     // Entertainment finish
 
-    var controller = new ScrollMagic.Controller();
     var contributeScale = new TimelineMax();
     contributeScale
       .set(".contribute", {
@@ -59,10 +55,10 @@ function myFunction(mobileView) {
       })
 
       .to(".contribute", 1, { scale: 1 });
-    var scale = new ScrollMagic.Scene({
+    var scale3 = new ScrollMagic.Scene({
       triggerElement: ".contribute",
       triggerHook: 1,
-      duration: "100%",
+      duration: "80%",
       offset: -120
     })
       .setTween(contributeScale)
@@ -70,6 +66,7 @@ function myFunction(mobileView) {
     // contribute finish
     // ====First scroll Scale finish======
   } else {
+    //PC animation start
     // cards on scroll animation start
     var controller = new ScrollMagic.Controller();
     var firstScrollScale = new TimelineMax();
@@ -83,11 +80,11 @@ function myFunction(mobileView) {
     var scale = new ScrollMagic.Scene({
       triggerElement: ".feature-container",
       triggerHook: 1,
-      duration: "100%",
+      duration: "100%"
     })
       .setTween(firstScrollScale)
       .addTo(controller);
-    // ====First scroll Scale finish======
+    // ====Sclae on  scroll  finish======
 
     var firstScrollFade = new TimelineMax();
     firstScrollFade
@@ -105,7 +102,7 @@ function myFunction(mobileView) {
     })
       .setTween(firstScrollFade)
       .addTo(controller);
-    // ====First scroll Fade finish======
+    // ====Fade In on  scroll  finish======
 
     var secondScrollmove = new TimelineMax();
     secondScrollmove.to(".learn", 3, { x: "120%" });
@@ -119,7 +116,7 @@ function myFunction(mobileView) {
       .setTween(secondScrollmove)
       .setPin(".feature-container")
       .addTo(controller);
-    // ====Second scroll Move finish======
+    // ====Move on  scroll  finish======
 
     var featureText = new TimelineMax();
     featureText
@@ -129,7 +126,7 @@ function myFunction(mobileView) {
       })
       .to(".feature-text h2", 2, { opacity: 1, y: "0%" });
 
-    var bounce = new ScrollMagic.Scene({
+    var featureTextFade = new ScrollMagic.Scene({
       triggerElement: ".feature-text",
       triggerHook: 1,
       duration: "100%"
@@ -139,9 +136,70 @@ function myFunction(mobileView) {
 
     // feature Text fade finish
     // ====cards on scroll animation for PC finish
-  }
-}
+  } //else finish
+} // featureAnimation function finish
 
 var mobileView = window.matchMedia("(max-width: 768px)");
-myFunction(mobileView);
-mobileView.addListener(myFunction);
+featureAnimation(mobileView);
+mobileView.addListener(featureAnimation);
+
+// hero image animation start
+// var heroImg = new TimelineMax({ repeat: -1 });
+// heroImg
+//   .from("#belt", 2, { y: "0%", x: "50%", ease: Power1.easeInOut })
+//   .to("#belt", 2, { y: "0%", x: "0%", ease: Power1.easeInOut })
+//   .from("#hair", 2, { y: "50%", x: "50%", ease: Power1.easeInOut }, "-=4")
+//   .to("#hair", 2, { y: "0%", x: "0%", ease: Power1.easeInOut }, "-=4")
+//   .from("#bandage", 2, { y: "-50%", x: "50%", ease: Power1.easeInOut }, "-=4")
+//   .to("#bandage", 2, { y: "0%", x: "0%", ease: Power1.easeInOut }, "-=4")
+//   .from("#stick", 2, { y: "-60%", x: "-20%", ease: Power1.easeInOut }, "-=4")
+//   .to("#stick", 2, { y: "0%", x: "0%", ease: Power1.easeInOut }, "-=4")
+//   .from("#chain", 2, { y: "30%", x: "-20%", ease: Power1.easeInOut }, "-=4")
+//   .to("#chain", 2, { y: "0%", x: "0%", ease: Power1.easeInOut }, "-=4")
+//   .from("#basket", 2, { y: "30%", x: "50%", ease: Power1.easeInOut }, "-=4")
+//   .to("#basket", 2, { y: "0%", x: "0%", ease: Power1.easeInOut }, "-=4")
+//   .from("#face", 2, { y: "-20%", x: "-20%", ease: Power1.easeInOut }, "-=4")
+//   .to("#face", 2, { y: "0%", x: "0%", ease: Power1.easeInOut }, "-=4")
+//   .from("#neck", 2, { y: "-30%", x: "-20%", ease: Power1.easeInOut }, "-=4")
+//   .to("#neck", 2, { y: "0%", x: "0%", ease: Power1.easeInOut }, "-=4");
+
+// var heroImgBuild = new ScrollMagic.Scene({
+//   triggerElement: ".jumjournal-hero",
+//   triggerHook: 0,
+//   duration: "100%"
+// })
+//   .setTween(heroImg)
+//   .addIndicators()
+//   .addTo(controller);
+
+//cards on scroll animation start
+var controller = new ScrollMagic.Controller();
+var heroImg = new TimelineMax();
+heroImg
+  .from("#belt", 2, { y: "0%", x: "50%", ease: Power1.easeInOut })
+  .to("#belt", 2, { y: "0%", x: "0%", ease: Power1.easeInOut })
+  .from("#hair", 2, { y: "50%", x: "50%", ease: Power1.easeInOut }, "-=4")
+  .to("#hair", 2, { y: "0%", x: "0%", ease: Power1.easeInOut }, "-=4")
+  .from("#bandage", 2, { y: "-50%", x: "50%", ease: Power1.easeInOut }, "-=4")
+  .to("#bandage", 2, { y: "0%", x: "0%", ease: Power1.easeInOut }, "-=4")
+  .from("#stick", 2, { y: "-60%", x: "-20%", ease: Power1.easeInOut }, "-=4")
+  .to("#stick", 2, { y: "0%", x: "0%", ease: Power1.easeInOut }, "-=4")
+  .from("#chain", 2, { y: "30%", x: "-20%", ease: Power1.easeInOut }, "-=4")
+  .to("#chain", 2, { y: "0%", x: "0%", ease: Power1.easeInOut }, "-=4")
+  .from("#basket", 2, { y: "30%", x: "50%", ease: Power1.easeInOut }, "-=4")
+  .to("#basket", 2, { y: "0%", x: "0%", ease: Power1.easeInOut }, "-=4")
+  .from("#face", 2, { y: "-20%", x: "-20%", ease: Power1.easeInOut }, "-=4")
+  .to("#face", 2, { y: "0%", x: "0%", ease: Power1.easeInOut }, "-=4")
+  .from("#neck", 2, { y: "-30%", x: "-20%", ease: Power1.easeInOut }, "-=4")
+  .to("#neck", 2, { y: "0%", x: "0%", ease: Power1.easeInOut }, "-=4");
+
+var heroImgBuild = new ScrollMagic.Scene({
+  triggerElement: ".jumjournal-hero",
+  triggerHook: 0,
+  duration: "100%"
+})
+  .setTween(heroImg)
+  .setPin(".jumjournal-hero")
+  .addTo(controller);
+
+// Hero animation finish  finish

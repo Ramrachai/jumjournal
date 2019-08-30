@@ -2,10 +2,10 @@
 particlesJS("particles1-js", {
   particles: {
     number: {
-      value: 20,
+      value: 5,
       density: {
         enable: true,
-        value_area: 2500
+        value_area: 3000
       }
     },
     color: {
@@ -113,10 +113,10 @@ particlesJS("particles1-js", {
 particlesJS("particles2-js", {
   particles: {
     number: {
-      value: 20,
+      value: 5,
       density: {
         enable: true,
-        value_area: 2500
+        value_area: 3000
       }
     },
     color: {
@@ -224,10 +224,10 @@ particlesJS("particles2-js", {
 particlesJS("particles3-js", {
   particles: {
     number: {
-      value: 20,
+      value: 5,
       density: {
         enable: true,
-        value_area: 2500
+        value_area: 3000
       }
     },
     color: {
@@ -338,10 +338,10 @@ particlesJS(
   {
     particles: {
       number: {
-        value: 20,
+        value: 5,
         density: {
           enable: true,
-          value_area: 2500
+          value_area: 3000
         }
       },
       color: {
@@ -450,10 +450,10 @@ particlesJS(
 particlesJS("particles5-js", {
   particles: {
     number: {
-      value: 20,
+      value: 5,
       density: {
         enable: true,
-        value_area: 2500
+        value_area: 3000
       }
     },
     color: {
@@ -561,10 +561,10 @@ particlesJS("particles5-js", {
 particlesJS("particles6-js", {
   particles: {
     number: {
-      value: 20,
+      value: 5,
       density: {
         enable: true,
-        value_area: 2500
+        value_area: 3000
       }
     },
     color: {
@@ -672,10 +672,10 @@ particlesJS("particles6-js", {
 particlesJS("particles7-js", {
   particles: {
     number: {
-      value: 20,
+      value: 5,
       density: {
         enable: true,
-        value_area: 2500
+        value_area: 3000
       }
     },
     color: {
@@ -783,10 +783,10 @@ particlesJS("particles7-js", {
 particlesJS("particles8-js", {
   particles: {
     number: {
-      value: 20,
+      value: 5,
       density: {
         enable: true,
-        value_area: 2500
+        value_area: 3000
       }
     },
     color: {
@@ -894,10 +894,10 @@ particlesJS("particles8-js", {
 particlesJS("particles9-js", {
   particles: {
     number: {
-      value: 20,
+      value: 5,
       density: {
         enable: true,
-        value_area: 2500
+        value_area: 3000
       }
     },
     color: {
@@ -1005,10 +1005,10 @@ particlesJS("particles9-js", {
 particlesJS("particles10-js", {
   particles: {
     number: {
-      value: 20,
+      value: 5,
       density: {
         enable: true,
-        value_area: 2500
+        value_area: 3000
       }
     },
     color: {
@@ -1116,10 +1116,10 @@ particlesJS("particles10-js", {
 particlesJS("particles11-js", {
   particles: {
     number: {
-      value: 20,
+      value: 5,
       density: {
         enable: true,
-        value_area: 2500
+        value_area: 3000
       }
     },
     color: {
@@ -1227,10 +1227,10 @@ particlesJS("particles11-js", {
 particlesJS("particles12-js", {
   particles: {
     number: {
-      value: 20,
+      value: 5,
       density: {
         enable: true,
-        value_area: 2500
+        value_area: 3000
       }
     },
     color: {

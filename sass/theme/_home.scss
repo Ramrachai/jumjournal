@@ -33,10 +33,15 @@
     }
   }
 
-  .hero-img-container img {
-    width: 100%;
-    height: auto;
-    padding-top: 8%;
+  .hero-img-container {
+    img {
+      width: 100%;
+      height: auto;
+      padding-top: 8%;
+    }
+    #heroImage {
+      margin-top: 50px;
+    }
   }
 }
 
@@ -248,10 +253,10 @@
   }
 }
 .feature-container {
-  background-color: #82aebf7a;
+  background-color: #b2c7dc;
+  background-image: url("../images/feature-bg.svg");
   position: relative;
   height: 110vh;
-  background-image: url("https://jumtech.net/image/original.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -274,8 +279,8 @@
   align-items: center;
 
   div {
-    height: 70vh;
-    border: 3px solid #e9ecef;
+    box-shadow: 4px 4px 5px #4a4a4a2b;
+    height: 60vh;
     background: #f8f9fa;
     padding: 20px;
     margin: 0 20px;
@@ -286,6 +291,7 @@
     justify-content: center;
     top: 0;
     transition: all 0.3s;
+    border-radius: 5px;
     i {
       display: block;
       font-size: 65px;
@@ -312,6 +318,7 @@
       color: $white;
       font-weight: 500;
       transition: all 0.3s;
+      margin: 0 auto;
     }
 
     &:hover,
@@ -324,7 +331,7 @@
       background-color: $logo-color;
     }
     &:hover {
-      border-color: $logo-color;
+      border: 1px solid $logo-color;
       box-shadow: 4px 8px 4px #2f2f2f45;
     }
   }
@@ -376,9 +383,7 @@ section.file-submit:after {
   left: 0;
   height: 100%;
   width: 100%;
-  background: url("https://jumtech.net/image/pattern-4.png") no-repeat center
-      bottom,
-    url("https://jumtech.net/image/submit-bg.svg") no-repeat top right;
+  background: url("https://jumtech.net/image/submit-bg.svg") no-repeat top right;
   z-index: -1;
 }
 .file-submit-container {
@@ -420,7 +425,8 @@ section.file-submit:after {
 }
 .home-btn {
   background: linear-gradient(90deg, #00c08d, #7ed563);
-  padding: 10px 26px;
+  padding: 10px 22px;
+  max-width: 60%;
   border-radius: 50px;
   color: #fff;
   text-transform: uppercase;

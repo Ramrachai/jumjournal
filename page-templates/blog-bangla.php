@@ -29,7 +29,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<?php
 								$args = array(
 									// Arguments for your query.
-									'cat' => '2',
+									'cat' => 'literature',
 									'posts_per_page' => '3',
 									'order' => 'DESC',
 									'orderby' => 'date',
