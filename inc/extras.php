@@ -94,10 +94,10 @@ if ( ! function_exists ( 'understrap_post_nav' ) ) {
 			return;
 		}
 		?>
-		<nav class="container navigation post-navigation">
-			<h2 class="sr-only"><?php esc_html_e( 'Post navigation', 'understrap' ); ?></h2>
-			<div class="row nav-links justify-content-between">
-				<?php
+<nav class="container navigation post-navigation">
+    <h2 class="sr-only"><?php esc_html_e( 'Post navigation', 'understrap' ); ?></h2>
+    <div class="row nav-links justify-content-between">
+        <?php
 				if ( get_previous_post_link() ) {
 					previous_post_link( '<span class="nav-previous">%link</span>', _x( '<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'understrap' ) );
 				}
@@ -105,9 +105,9 @@ if ( ! function_exists ( 'understrap_post_nav' ) ) {
 					next_post_link( '<span class="nav-next">%link</span>', _x( '%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'understrap' ) );
 				}
 				?>
-			</div><!-- .nav-links -->
-		</nav><!-- .navigation -->
-		<?php
+    </div><!-- .nav-links -->
+</nav><!-- .navigation -->
+<?php
 	}
 }
 
@@ -125,7 +125,7 @@ if ( ! function_exists ( 'understrap_article_nav' ) ) {
 			return;
 		}
 		?>
-			<?php
+<?php
 			if ( get_previous_post_link() ) {
 				previous_post_link( '
 					<div class="article-nav article-previous">
@@ -155,7 +155,7 @@ if ( ! function_exists ( 'understrap_article_nav' ) ) {
 			
 			}
 			?>
-		<?php
+<?php
 	}
 }
 
@@ -223,16 +223,16 @@ function jumjournal_related_posts() {
 	// Check that we have query results.
 	if ( $query->have_posts() ) { ?>
 
-	<div class="row justify-content-center">
-		<div class="col-md-7 padding">
+<div class="row justify-content-center">
+    <div class="col-md-7 padding">
 
-			<div class="related-post-con post-style-one">
-				<div class="cat-tilte style-one color-eight no-link">
-					Related articles
-				</div>
-				<div class="row">
+        <div class="related-post-con post-style-one">
+            <div class="cat-tilte style-one color-eight no-link">
+                Related articles
+            </div>
+            <div class="row">
 
-					<?php
+                <?php
 						// Start looping over the query results.
 						while ( $query->have_posts() ) {
 
@@ -244,13 +244,15 @@ function jumjournal_related_posts() {
 						} 
 					?>
 
-				</div><!--row-->
-			</div><!--.related-post-con-->
+            </div>
+            <!--row-->
+        </div>
+        <!--.related-post-con-->
 
-		</div>
-	</div>
+    </div>
+</div>
 
-		<?php
+<?php
 	}
 	// Restore original post data.
 	wp_reset_postdata();
@@ -289,17 +291,17 @@ function jumjournal_related_books() {
 	// Check that we have query results.
 	if ( $query->have_posts() ) { ?>
 
-	<div class="row justify-content-center book-category similar-books">
-		<div class="col-md-10">
+<div class="row justify-content-center book-category similar-books">
+    <div class="col-md-10">
 
-			<div class="block-inner">
-				<div class="header">
-					<h1 class="category-type">Similar Books</h1>
-				</div>
-				<div class="body-content">
-					<div class="book-section owl-carousel owl-theme">
+        <div class="block-inner">
+            <div class="header">
+                <h1 class="category-type">Similar Books</h1>
+            </div>
+            <div class="body-content">
+                <div class="book-section owl-carousel owl-theme">
 
-						<?php
+                    <?php
 							// Start looping over the query results.
 							while ( $query->have_posts() ) {
 
@@ -311,15 +313,15 @@ function jumjournal_related_books() {
 							} 
 						?>
 
-					</div>
-				</div>
-			</div>
-			<!-- .book-inner -->
+                </div>
+            </div>
+        </div>
+        <!-- .book-inner -->
 
-		</div>
-	</div>
+    </div>
+</div>
 
-		<?php
+<?php
 	}
 	// Restore original post data.
 	wp_reset_postdata();
@@ -341,4 +343,48 @@ if ( ! function_exists( 'understrap_post_tags' ) ) {
 			}
 		}
 	}
+}
+
+
+//Category based Related Post function 
+function jumjournal_cats_related_post() {
+
+    $post_id = get_the_ID();
+    $cat_ids = array();
+    $categories = get_the_category( $post_id );
+
+    if(!empty($categories) && is_wp_error($categories)):
+        foreach ($categories as $category):
+            array_push($cat_ids, $category->term_id);
+        endforeach;
+    endif;
+
+    $current_post_type = get_post_type($post_id);
+    $query_args = array( 
+
+        'category__in'   => $cat_ids,
+        'post_type'      => $current_post_type,
+        'post_not_in'    => array($post_id),
+        'posts_per_page'  => '4'
+     );
+
+    $related_cats_post = new WP_Query( $query_args );
+
+    if($related_cats_post->have_posts()):
+         while($related_cats_post->have_posts()): $related_cats_post->the_post(); ?>
+<!-- <ul>
+    <li>
+        <a href="<?php // the_permalink(); ?>">
+            <?php // the_title(); ?>
+        </a>
+        <?php // the_category(); ?>
+    </li>
+</ul> -->
+<?php get_template_part('loop-templates/related-post-english') ?>
+<?php endwhile;
+
+        // Restore original Post Data
+        wp_reset_postdata();
+     endif;
+
 }

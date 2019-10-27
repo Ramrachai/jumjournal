@@ -1,4 +1,4 @@
-            <div class="post-single">
+             <div class="post-single">
               <div class="post-image">
                 <?php if ( ! has_post_thumbnail() ) { ?>
                   <img src="<?php echo get_template_directory_uri(); ?>/images/post-images/image-size-one.jpg" alt="post image">
@@ -18,8 +18,9 @@
                   <span class="post-meta">
                     <?php echo get_post_meta(get_the_ID(), 'biography_info', true ); ?>
                   </span>
+                  
                 <?php endif; ?>
-
+                <a href = '<?php the_permalink(); ?>' class = 'read-more understrap-read-more-link' >Read More </a>
               </div>
               <a class="link-overlay" href="<?php the_permalink(); ?>"></a>
             </div>

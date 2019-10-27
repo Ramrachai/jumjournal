@@ -30,6 +30,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 								$args = array(
 									// Arguments for your query.
 									'cat' => 'literature',
+									'category_name' => 'literature',
 									'posts_per_page' => '3',
 									'order' => 'DESC',
 									'orderby' => 'date',
@@ -37,7 +38,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 									'post_type' => 'post',
 									'post_status' => 'publish'
 								);
-
 								// Custom query.
 								$query = new WP_Query( $args );
 								
@@ -75,7 +75,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<?php
 							$args = array(
 								// Arguments for your query.
-								'cat' => '3',
+								'cat' => 'personality',
+								'category_name' => 'personality',
 								'posts_per_page' => '2',
 								'order' => 'DESC',
 								'orderby' => 'date',

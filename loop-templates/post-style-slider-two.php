@@ -18,7 +18,7 @@
                     <?php if ( ! has_post_thumbnail() ) { ?>
                       <img src="<?php echo get_template_directory_uri(); ?>/images/post-images/image-size-slider.jpg" alt="post image">
                     <?php } else {
-                      echo get_the_post_thumbnail( $post->ID, 'medium' ); 
+                      echo get_the_post_thumbnail( $post->ID, 'large' ); 
                     } ?>
 									</div>
 
