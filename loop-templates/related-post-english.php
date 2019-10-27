@@ -1,4 +1,4 @@
-<div class="col-md-3 col-2 ">
+<div class="col-md-3 col-sm-6 ">
     <div class="post-single">
         <div class="post-image">
             <?php if ( ! has_post_thumbnail() ) { ?>

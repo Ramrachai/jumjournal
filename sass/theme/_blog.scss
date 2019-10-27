@@ -337,6 +337,9 @@
     padding: 5px 0;
   }
 }
+textarea#comment {
+  height: 120px;
+}
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
   // Slider
