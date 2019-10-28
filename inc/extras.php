@@ -372,19 +372,37 @@ function jumjournal_cats_related_post() {
 
     if($related_cats_post->have_posts()):
          while($related_cats_post->have_posts()): $related_cats_post->the_post(); ?>
-<!-- <ul>
-    <li>
-        <a href="<?php // the_permalink(); ?>">
-            <?php // the_title(); ?>
-        </a>
-        <?php // the_category(); ?>
-    </li>
-</ul> -->
 <?php get_template_part('loop-templates/related-post-english') ?>
 <?php endwhile;
 
         // Restore original Post Data
         wp_reset_postdata();
      endif;
-
 }
+
+
+// english single post view counter
+function getPostViews($postID){
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+        return "0 View";
+    }
+    return $count.' Views';
+}
+function setPostViews($postID) {
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        $count = 0;
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+    }else{
+        $count++;
+        update_post_meta($postID, $count_key, $count);
+    }
+}
+// Remove issues with prefetching adding extra views
+remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);

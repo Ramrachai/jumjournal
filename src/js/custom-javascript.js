@@ -269,4 +269,6 @@ jQuery(document).ready(function($) {
 
   checkPosition();
   // Toggle mobile search icon
+
+  $("#commentform #submit").addClass("home-btn");
 });

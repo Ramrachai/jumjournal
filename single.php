@@ -20,9 +20,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 <?php endif; ?>
 
 <div class="site-post main-content">
-    <div class="<?php echo esc_attr( $container ); ?>">
+    <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-12 <?php if ( ! has_post_format() ): echo 'col-md-7'; else: echo 'col-md-10'; endif; ?>">
+            <div class='col-md-2'>
+
+            </div>
+            <div class="col-12 <?php if ( ! has_post_format() ): echo 'col-md-8'; else: echo 'col-md-10'; endif; ?>">
                 <div class="post-content-main <?php if ( ! has_post_format() ): echo 'article-margin'; endif; ?> ">
 
                     <!--loop start-->
@@ -35,12 +38,32 @@ $container = get_theme_mod( 'understrap_container_type' );
 
                         <header class="entry-header">
                             <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-                            <p class="post-time">
-                                <?php echo get_the_date( 'j F, Y' ); ?>
-                            </p>
+
+                            <div class="post-meta">
+                                <span class="post-author">
+                                    By <a href=" <?php echo get_author_posts_url(get_the_author_meta('ID'));?> ">
+                                        <?php the_author();  ;?>
+                                    </a>
+
+                                </span>
+                                <span class="post-time">
+                                    <?php echo get_the_date( 'j F, Y' ); ?>
+                                </span>
+                                <span class="view-counter">
+                                    <?php setPostViews(get_the_ID()); ?>
+                                    <?php echo getPostViews(get_the_ID());?>
+                                </span>
+                                <span>
+                                    Commnets: <?php echo get_comments_number()?>
+                                </span>
+                            </div>
+
                         </header>
 
                         <div class="entry-content">
+                            <?php the_post_thumbnail(); ?>
+
+                            <p class="caption"> <?php the_post_thumbnail_caption(); ?> </p>
                             <?php the_content(); ?>
                         </div>
 
@@ -62,15 +85,37 @@ $container = get_theme_mod( 'understrap_container_type' );
 
             </div>
             <!--.col-->
+            <div class='col-md-2 ' style='padding: 0 8px 0 8px ;'>
+                <ul class='category-list'>
+                    <?php wp_list_categories(); ?>
+                </ul>
+
+                <p class='tag-list-title'>Tags</p>
+                <ul class='tag-list'>
+                    <?php
+                    $tags = get_tags();
+                    if ( $tags ) :
+                        foreach ( $tags as $tag ) : ?>
+                    <li> <a href="<?php echo esc_url( get_tag_link( $tag->term_id ) ); ?>"
+                            title="<?php echo esc_attr( $tag->name ); ?>"><?php echo esc_html( $tag->name ); ?></a>
+                    </li>
+                    <?php endforeach; ?>
+                    <?php endif; ?>
+                </ul>
+
+            </div>
         </div>
-        <div class="container related-post">
-            <div class="feature-text">
-                <h2>Related posts</h2>
+        <div class=" related-post">
+            <div class="container">
+                <div class="feature-text">
+                    <h2>Related posts</h2>
+                </div>
+
+                <div class="row">
+                    <?php jumjournal_cats_related_post(); ?>
+                </div>
             </div>
 
-            <div class="row">
-                <?php jumjournal_cats_related_post(); ?>
-            </div>
         </div>
 
 
@@ -78,7 +123,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( ( comments_open() || get_comments_number() ) && ! has_post_format() ) : ?>
         <div class="row justify-content-center">
-            <div class="col-md-7 padding">
+            <div class="col-md-9 padding">
                 <div class="comment-box">
 
                     <?php comments_template(); ?>
