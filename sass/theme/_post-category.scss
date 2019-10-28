@@ -1,7 +1,17 @@
 .category-banner {
-  height: 15.625rem;
+  height: auto;
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   padding-top: 2rem;
   padding-bottom: 1rem;
+}
+.category-name,
+.category-description,
+.total-posts {
+  text-align: center;
+  color: $grey2;
+}
+
+.tag-title span {
+  text-transform: uppercase;
 }
