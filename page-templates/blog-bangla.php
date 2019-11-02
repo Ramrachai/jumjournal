@@ -29,7 +29,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<?php
 								$args = array(
 									// Arguments for your query.
+<<<<<<< HEAD
 									'cat' => '10',
+=======
+									'cat' => 'literature',
+									'category_name' => 'literature',
+>>>>>>> 13f779ba34669f165648c151428efb4f70c7455f
 									'posts_per_page' => '3',
 									'order' => 'DESC',
 									'orderby' => 'date',
@@ -37,7 +42,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 									'post_type' => 'post',
 									'post_status' => 'publish'
 								);
-
 								// Custom query.
 								$query = new WP_Query( $args );
 								
@@ -75,7 +79,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<?php
 							$args = array(
 								// Arguments for your query.
+<<<<<<< HEAD
 								'cat' => '11',
+=======
+								'cat' => 'personality',
+								'category_name' => 'personality',
+>>>>>>> 13f779ba34669f165648c151428efb4f70c7455f
 								'posts_per_page' => '2',
 								'order' => 'DESC',
 								'orderby' => 'date',

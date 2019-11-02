@@ -57,8 +57,13 @@ $category = get_queried_object();
 
         <div class="row">
 
+<<<<<<< HEAD
             <div class="col-2"></div>
             <div class="col-12 col-md-8">
+=======
+            <div class="col-md-2"></div>
+            <div class="col-md-8 col-12">
+>>>>>>> 13f779ba34669f165648c151428efb4f70c7455f
                 <main class="site-main post-style-one" id="main">
 
                     <div class="row">
@@ -126,4 +131,8 @@ $category = get_queried_object();
 </div><!-- #archive-wrapper -->
 
 <?php get_template_part('global-templates/footer-one'); ?>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 13f779ba34669f165648c151428efb4f70c7455f
 <?php get_footer(); ?>

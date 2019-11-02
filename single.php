@@ -14,11 +14,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
 <?php if ( ! has_post_format() ): ?>
-	<!-- post featured image via bg-image -->
-	<div class="post-feature-image" style="background-image: url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'full'); ?>);"></div>
+<!-- post featured image via bg-image -->
+<div class="post-feature-image"
+    style="background-image: url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'full'); ?>);"></div>
 <?php endif; ?>
 
 <div class="site-post main-content">
+<<<<<<< HEAD
 	<div class="<?php echo esc_attr( $container ); ?>">
 		<div class="row justify-content-center">
 			<div class="col-12 <?php if ( ! has_post_format() ): echo 'col-md-7'; else: echo 'col-md-10'; endif; ?>">
@@ -61,6 +63,94 @@ $container = get_theme_mod( 'understrap_container_type' );
 			</div><!--.col-->
 		</div>
 		<div class=" related-post">
+=======
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class='col-md-2'>
+
+            </div>
+            <div class="col-12 <?php if ( ! has_post_format() ): echo 'col-md-8'; else: echo 'col-md-10'; endif; ?>">
+                <div class="post-content-main <?php if ( ! has_post_format() ): echo 'article-margin'; endif; ?> ">
+
+                    <!--loop start-->
+                    <?php while ( have_posts() ) : the_post(); ?>
+
+                    <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+
+                        <!-- check if standard post -->
+                        <?php if ( ! has_post_format() ): // standard posts: articles ?>
+
+                        <header class="entry-header">
+                            <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+
+                            <div class="post-meta">
+                                <span class="post-author">
+                                    By <a href=" <?php echo get_author_posts_url(get_the_author_meta('ID'));?> ">
+                                        <?php the_author();  ;?>
+                                    </a>
+
+                                </span>
+                                <span class="post-time">
+                                    <?php echo get_the_date( 'j F, Y' ); ?>
+                                </span>
+                                <span class="view-counter">
+                                    <?php setPostViews(get_the_ID()); ?>
+                                    <?php echo getPostViews(get_the_ID());?>
+                                </span>
+                                <span>
+                                    Commnets: <?php echo get_comments_number()?>
+                                </span>
+                            </div>
+
+                        </header>
+
+                        <div class="entry-content">
+                            <?php the_post_thumbnail(); ?>
+
+                            <p class="caption"> <?php the_post_thumbnail_caption(); ?> </p>
+                            <?php the_content(); ?>
+                        </div>
+
+                        <?php endif; //end ofstandard posts: articles ?>
+
+
+                        <!-- check if book, photo, audio or video -->
+                        <?php if( get_post_format() ) { get_template_part('loop-templates/post-formats'); } ?>
+
+                    </article><!-- #post-## -->
+
+                    <?php understrap_article_nav(); ?>
+
+                    <?php endwhile; // end of the loop. ?>
+                    <!-- end-->
+
+                </div>
+                <!--.page-content-main-->
+
+            </div>
+            <!--.col-->
+            <div class='col-md-2 ' style='padding: 0 8px 0 8px ;'>
+                <ul class='category-list'>
+                    <?php wp_list_categories(); ?>
+                </ul>
+
+                <p class='tag-list-title'>Tags</p>
+                <ul class='tag-list'>
+                    <?php
+                    $tags = get_tags();
+                    if ( $tags ) :
+                        foreach ( $tags as $tag ) : ?>
+                    <li> <a href="<?php echo esc_url( get_tag_link( $tag->term_id ) ); ?>"
+                            title="<?php echo esc_attr( $tag->name ); ?>"><?php echo esc_html( $tag->name ); ?></a>
+                    </li>
+                    <?php endforeach; ?>
+                    <?php endif; ?>
+                </ul>
+
+            </div>
+        </div>
+        <div class=" related-post">
+>>>>>>> 13f779ba34669f165648c151428efb4f70c7455f
             <div class="container">
                 <div class="feature-text">
                     <h2>Related posts</h2>
@@ -72,26 +162,34 @@ $container = get_theme_mod( 'understrap_container_type' );
             </div>
 
         </div>
+<<<<<<< HEAD
 				
 		<!-- <?php jumjournal_related_books(); ?> -->
 
 		<?php
+=======
+
+
+        <?php
+>>>>>>> 13f779ba34669f165648c151428efb4f70c7455f
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( ( comments_open() || get_comments_number() ) && ! has_post_format() ) : ?>
-			<div class="row justify-content-center">
-				<div class="col-md-7 padding">
-					<div class="comment-box">
-						
-						<?php comments_template(); ?>
+        <div class="row justify-content-center">
+            <div class="col-md-9 padding">
+                <div class="comment-box">
 
-					</div>
-				</div>
-			</div>
-		<?php endif; ?>
+                    <?php comments_template(); ?>
 
-	</div>
-</div><!--.page .main-content-->
+                </div>
+            </div>
+        </div>
+        <?php endif; ?>
 
-<?php get_template_part('global-templates/footer-two'); ?>
+    </div>
+</div>
+<!--.page .main-content-->
+
+
+<?php get_template_part('global-templates/footer-one'); ?>
 
 <?php get_footer(); ?>
