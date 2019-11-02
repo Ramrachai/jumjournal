@@ -5,3 +5,14 @@
   padding-top: 2rem;
   padding-bottom: 1rem;
 }
+
+.category-name,
+.category-description,
+.total-posts {
+  text-align: center;
+  color: $grey2;
+}
+
+.tag-title span {
+  text-transform: uppercase;
+}

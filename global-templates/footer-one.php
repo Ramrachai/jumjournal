@@ -36,7 +36,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
   <div id="support-center" class="support-center">
     <i class="fas fa-medkit"></i>
-    <a href="<?php echo esc_url( home_url( '/' ) ); ?>support-center">
+    <a href="<?php echo esc_url( home_url( '/' ) ); ?>support">
       Support <br> center
     </a>
   </div>

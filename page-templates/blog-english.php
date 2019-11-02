@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Blog Bangla
+ * Template Name: Blog English
  *
  * This template will be used as Bangla blog homepage
  * @package understrap
@@ -21,7 +21,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="col-md-8">
 					<div class="feature-post-slider post-style-slider slider-one">
 						<div class="cat-tilte style-one color-one">
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/literature">সাহিত্য</a>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/literature">Literature</a>
 						</div>
 
 						<div class="post-slider-container owl-carousel owl-theme">
@@ -29,7 +29,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<?php
 								$args = array(
 									// Arguments for your query.
-									'cat' => '10',
+									'cat' => '18',
 									'posts_per_page' => '3',
 									'order' => 'DESC',
 									'orderby' => 'date',
@@ -68,14 +68,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<div class="col-md-3 offset-md-1">
 					<div class="cat-tilte style-one color-two">
-						<a href="">ব্যক্তিত্ব</a>
+						<a href="">Personality</a>
 					</div>
 					<div class="post-style-square biography">
 
 						<?php
 							$args = array(
 								// Arguments for your query.
-								'cat' => '11',
+								'cat' => '19',
 								'posts_per_page' => '2',
 								'order' => 'DESC',
 								'orderby' => 'date',
@@ -119,14 +119,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="row">
 				<div class="col-12">
 					<div class="cat-tilte style-one color-three">
-						<a href="">ইতিহাস</a>
+						<a href="">History</a>
 					</div>
 				</div>
 
         <?php
           $args = array(
             // Arguments for your query.
-            'cat' => '12',
+            'cat' => '3',
             'posts_per_page' => '4',
             'order' => 'DESC',
             'orderby' => 'date',
@@ -170,7 +170,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="row">
 						<div class="col-12">
 							<div class="cat-tilte style-one color-four">
-								<a href="">শিল্প সংস্কৃতি এবং অন্যান্য</a>
+								<a href="">Art & Culture And others</a>
 							</div>
 						</div>
 					</div>
@@ -178,7 +178,7 @@ $container = get_theme_mod( 'understrap_container_type' );
           <?php
             $args = array(
               // Arguments for your query.
-              'cat' => '13',
+              'cat' => '4',
               'posts_per_page' => '6',
               'order' => 'DESC',
               'orderby' => 'date',
@@ -217,7 +217,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="row">
 						<div class="col-12">
 							<div class="cat-tilte style-one color-five">
-								<a href="">রাজনীতি</a>
+								<a href="">Politics</a>
 							</div>
 						</div>
 					</div>
@@ -225,7 +225,7 @@ $container = get_theme_mod( 'understrap_container_type' );
           <?php
             $args = array(
               // Arguments for your query.
-              'cat' => '14',
+              'cat' => '6',
               'posts_per_page' => '6',
               'order' => 'DESC',
               'orderby' => 'date',
@@ -270,14 +270,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="col-md-3">
 
 					<div class="cat-tilte style-one color-six">
-						<a href="">সাখাৎকার</a>
+						<a href="">Interview</a>
 					</div>
 
 					<div class="post-style-square cat-interview">
 						<?php
 							$args = array(
 								// Arguments for your query.
-								'cat' => '15',
+								'cat' => '5',
 								'posts_per_page' => '2',
 								'order' => 'DESC',
 								'orderby' => 'date',
@@ -312,7 +312,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="col-md-8 offset-md-1">
 					<div class="post-style-slider slider-two">
 						<div class="cat-tilte style-one color-seven">
-							<a href="">প্রতিবেদন</a>
+							<a href="">Report</a>
 						</div>
 						
 						<div class="post-slider-container owl-carousel owl-theme">
@@ -320,7 +320,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<?php
 								$args = array(
 									// Arguments for your query.
-									'cat' => '16',
+									'cat' => '8',
 									'posts_per_page' => '6',
 									'order' => 'DESC',
 									'orderby' => 'date',
@@ -368,14 +368,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="row">
 				<div class="col-6 col-12">
 					<div class="cat-tilte style-one color-eight">
-						<a href="">শিক্ষা</a>
+						<a href="">Education</a>
 					</div>
 				</div>
 				
         <?php
           $args = array(
             // Arguments for your query.
-            'cat' => '17',
+            'cat' => '7',
             'posts_per_page' => '4',
             'order' => 'DESC',
             'orderby' => 'date',

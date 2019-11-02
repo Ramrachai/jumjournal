@@ -18,57 +18,66 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper" id="archive-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+    <h1 class='tag-title feature-text'> Result for tag name: &nbsp; <span> <?php single_tag_title();?> </span> </h1>
+    <div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
-		<div class="row">
+        <div class="row">
 
-			<!-- Do the left sidebar check -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
+            <div class="col-md-2"></div>
+            <div class="col-12 col-md-8 ">
+                <main class="site-main" id="main">
 
-			<main class="site-main" id="main">
+                    <?php if ( have_posts() ) : ?>
 
-				<?php if ( have_posts() ) : ?>
+                    <!-- <header class="page-header">
+                        <?php
+		the_archive_title( '<h1 class="page-title">', '</h1>' );
+		the_archive_description( '<div class="taxonomy-description">', '</div>' );
+		?>
+					</header> -->
+					<!-- .page-header -->
 
-					<header class="page-header">
-						<?php
-						the_archive_title( '<h1 class="page-title">', '</h1>' );
-						the_archive_description( '<div class="taxonomy-description">', '</div>' );
-						?>
-					</header><!-- .page-header -->
+                    <div class="container">
+                        <div class="row"> <?php /* Start the Loop */ ?>
+                            <?php while ( have_posts() ) : the_post(); ?>
 
-					<?php /* Start the Loop */ ?>
-					<?php while ( have_posts() ) : the_post(); ?>
+                            <?php
 
-						<?php
+/*
+ * Include the Post-Format-specific template for the content.
+ * If you want to override this in a child theme, then include a file
+ * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+ */
+get_template_part( 'loop-templates/content', get_post_format() );
+?>
 
-						/*
-						 * Include the Post-Format-specific template for the content.
-						 * If you want to override this in a child theme, then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'loop-templates/content', get_post_format() );
-						?>
 
-					<?php endwhile; ?>
 
-				<?php else : ?>
+                            <?php endwhile; ?>
 
-					<?php get_template_part( 'loop-templates/content', 'none' ); ?>
+                            <?php else : ?>
 
-				<?php endif; ?>
+                            <?php get_template_part( 'loop-templates/content', 'none' ); ?>
 
-			</main><!-- #main -->
+                            <?php endif; ?>
+                        </div>
+                    </div>
 
-			<!-- The pagination component -->
-			<?php understrap_pagination(); ?>
+                </main><!-- #main -->
 
-			<!-- Do the right sidebar check -->
-			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
+                <!-- The pagination component -->
+                <?php understrap_pagination(); ?>
+            </div>
+            <div class="col-md-2"></div>
 
-		</div> <!-- .row -->
 
-	</div><!-- #content -->
 
-	</div><!-- #archive-wrapper -->
 
+        </div> <!-- .row -->
+
+    </div><!-- #content -->
+
+</div><!-- #archive-wrapper -->
+
+<?php get_template_part('global-templates/footer-one'); ?>
 <?php get_footer(); ?>

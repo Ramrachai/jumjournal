@@ -350,7 +350,7 @@ $container = get_theme_mod( 'understrap_container_type' );
           <i class="fas fa-graduation-cap"></i>
           <h3>Learn</h3>
           <p>Let’s explore what’s on Jumjournal.There are lot's of stuff regarding our own history, culture, people,lifestyle and struggle.</p>
-          <a href="#" class ='btn home-btn  '>Learn More</a>
+          <a href="<?php echo esc_url( home_url( '/' ) ); ?>bangla-blog" alt="learn" class ='btn home-btn  '>Learn More</a>
         </div>
       <!-- learn -->
 
@@ -359,7 +359,7 @@ $container = get_theme_mod( 'understrap_container_type' );
       <i class="fa fa-music"></i>
           <h3>Entertainment</h3>
           <p>Feel Your Identity. Photos, videos and musics are organized at one place to enjoy and feel them even more better.</p>
-          <a href="#" class ='btn home-btn '>Learn More</a>
+          <a href="" class ='btn home-btn ' alt="entertaiment">Learn More</a>
         </div>
       <!-- Entertainment -->
 
@@ -368,7 +368,7 @@ $container = get_theme_mod( 'understrap_container_type' );
       <i class="fas fa-hands-helping"></i>
           <h3>Contribute</h3>
           <p>Let's make it even better. Jumjournal is comitted to build a great platform of online resources.Be a part of this initiative.</p>
-          <a href="#" class ='btn home-btn '>Learn More</a>
+          <a href="<?php echo esc_url( home_url( '/' ) ); ?>submit" class ='btn home-btn' alt="contribute">Learn More</a>
         </div>
       <!-- Contribute -->
 
@@ -385,7 +385,7 @@ $container = get_theme_mod( 'understrap_container_type' );
       <div class="col-12 file-submit-container">
         <h2>Send us your files</h2>
         <p>Your small contribution can play very important role to sustainably conserve your culture for present and future generations. Get started today, be a part of jumjournal community. You can send us Audios, Videos, Pictures and Pdf books. </p>
-        <div class='submit-btn-container'> <a href="#" class = 'home-btn'>File submit</a> </div>
+        <div class='submit-btn-container'> <a class = 'home-btn' href="<?php echo esc_url( home_url( '/' ) ); ?>submit">File submit</a> </div>
       </div>
     </div>
   </div>

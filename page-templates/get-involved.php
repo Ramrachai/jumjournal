@@ -15,7 +15,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 ?>
   <div class="page-header type-three">
     <div class="container-fluid">
-      <div class="row justify-content-center">
+      <div class="row justify-content-center get-involved-1stdiv">
         <div class="col-md-5">
           <div class="content-inner">
             <h3 class="moto">Whether you’re <span>student</span>, <span>teacher</span>, <span>writter</span>, <span>photographer</span>, <span>video editor</span>, <span>film maker</span>, <span>designer</span>, <span>developer</span>  or just like helping out, we’re always looking for people to help make Jumjournal even better.</h3>
@@ -24,7 +24,7 @@ $container = get_theme_mod( 'understrap_container_type' );
         </div> 
         <div class="col-md-3">
           <div class="box">
-            <img src="images/jumjournal-contributors.jpg" alt="jumjournal-contributors" class="img-responsive">
+            <img src="<?php bloginfo('template_url')?>/images/jumjournal-contributors.jpg" alt="jumjournal-contributors" class="img-responsive">
           </div>
         </div>
         <div id="fav" class="fav">

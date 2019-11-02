@@ -60,8 +60,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			</div><!--.col-->
 		</div>
+		<div class=" related-post">
+            <div class="container">
+                <div class="feature-text">
+                    <h2>Related posts</h2>
+                </div>
+
+                <div class="row">
+                    <?php jumjournal_cats_related_post(); ?>
+                </div>
+            </div>
+
+        </div>
 				
-		<?php jumjournal_related_books(); ?>
+		<!-- <?php jumjournal_related_books(); ?> -->
 
 		<?php
 			// If comments are open or we have at least one comment, load up the comment template.
