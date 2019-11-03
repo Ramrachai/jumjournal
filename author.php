@@ -10,100 +10,129 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
-
 get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<div class="wrapper" id="author-wrapper">
+<div class="container author-wrapper">
+    <div class="row">
+        <div class="col-12 col-md-3">
+            <header class="author-header">
+                <?php
+            if ( isset( $_GET['author_name'] ) ) {
+            $curauth = get_user_by( 'slug', $author_name );
+            } else {
+            $curauth = get_userdata( intval( $author ) );
+            }
+            ?>
+                <div class='pic-name'>
+                    <!-- show avatar  -->
+                    <span class='author-avatar'>
+                        <?php if ( ! empty( $curauth->ID ) ) : ?>
+                        <?php echo get_avatar( $curauth->ID ); ?>
+                        <?php endif; ?>
+                    </span>
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+                    <div class='author-meta'>
+                        <!-- show nick name -->
+                        <span class='nickname'>
+                            <b>Name: </b> <?php echo esc_html( $curauth->nickname ); ?>
+                        </span>
+                        <!-- show full name -->
+                        <span class='fullname'>
+                            <?php if ( ! empty( $curauth->first_name ) & ! empty($curauth->last_name ) ) : ?>
+                            <b>Full name: </b>
+                            <?php echo esc_html( $curauth->first_name. " " . $curauth->last_name ); ?>
+                            <?php endif; ?>
+                        </span>
+                        <span> <b> Role: </b>
+                            <?php ; 
+                        $user = wp_get_current_user();
+                        $roles = ( array ) $user->roles;
+                        echo $roles[0];
+                        ?>
+                        </span>
+                        <span><b>Posts: </b> <?php echo count_user_posts($curauth->ID); ?> </span>
 
-		<div class="row">
+                        <?php if ( ! empty( $curauth->user_url ) || ! empty( $curauth->user_description ) ) : ?>
+                        <div class='author-description'>
+                            <?php if ( ! empty( $curauth->user_description ) ) : ?>
+                            <p>
+                                <b> <?php esc_html_e( 'About author:', 'understrap' ); ?> </b>
+                                <?php esc_html_e( $curauth->user_description ); ?>
+                            </p>
+                            <?php endif; ?>
+                        </div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </header><!-- .page-header -->
 
-			<!-- Do the left sidebar check -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
+        </div> <!-- col-md-3 finish -->
+        <div class="col-12 col-md-7">
+            <main class="site-main post-style-one" id="main">
 
-			<main class="site-main" id="main">
+                <p class='gradient-text'> <b> <?php echo $curauth->nickname;  ?> </b> has published <b>
+                        <?php echo count_user_posts($curauth->ID); ?> </b> posts
+                </p>
+                <div class="row">
 
-				<header class="page-header author-header">
+                    <?php 
+                    $args = array(
+                        // Arguments for your query.
+                        'posts_per_page' => '12',
+                        'order' => 'DESC',
+                        'orderby' => 'date',
+                        'ignore_sticky_posts' => true,
+                        'post_type' => 'post',
+                        'post_status' => 'publish'
+                    );
 
-					<?php
-					if ( isset( $_GET['author_name'] ) ) {
-						$curauth = get_user_by( 'slug', $author_name );
-					} else {
-						$curauth = get_userdata( intval( $author ) );
-					}
-					?>
+                    // Custom query.
+                    $query = new WP_Query( $args );
+                ?>
+                    <?php if ( $query->have_posts() ) : ?>
 
-					<h1><?php echo esc_html__( 'About:', 'understrap' ) . ' ' . esc_html( $curauth->nickname ); ?></h1>
+                    <?php /* Start the Loop */ ?>
+                    <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
-					<?php if ( ! empty( $curauth->ID ) ) : ?>
-						<?php echo get_avatar( $curauth->ID ); ?>
-					<?php endif; ?>
+                    <?php
 
-					<?php if ( ! empty( $curauth->user_url ) || ! empty( $curauth->user_description ) ) : ?>
-						<dl>
-							<?php if ( ! empty( $curauth->user_url ) ) : ?>
-								<dt><?php esc_html_e( 'Website', 'understrap' ); ?></dt>
-								<dd>
-									<a href="<?php echo esc_url( $curauth->user_url ); ?>"><?php echo esc_html( $curauth->user_url ); ?></a>
-								</dd>
-							<?php endif; ?>
+/*
+* Include the Post-Format-specific template for the content.
+* If you want to override this in a child theme, then include a file
+* called content-___.php (where ___ is the Post Format name) and that will be used instead.
+*/
+get_template_part( 'loop-templates/content', get_post_format() );
+?>
 
-							<?php if ( ! empty( $curauth->user_description ) ) : ?>
-								<dt><?php esc_html_e( 'Profile', 'understrap' ); ?></dt>
-								<dd><?php esc_html_e( $curauth->user_description ); ?></dd>
-							<?php endif; ?>
-						</dl>
-					<?php endif; ?>
+                    <?php endwhile; ?>
 
-					<h2><?php echo esc_html( 'Posts by', 'understrap' ) . ' ' . esc_html( $curauth->nickname ); ?>:</h2>
+                    <?php else : ?>
 
-				</header><!-- .page-header -->
+                    <?php get_template_part( 'loop-templates/content', 'none' ); ?>
 
-				<ul>
+                    <?php endif; ?>
+                    <!-- // Restore original post data. -->
+                    <?php	wp_reset_postdata(); ?>
+                </div>
 
-					<!-- The Loop -->
-					<?php if ( have_posts() ) : ?>
-						<?php while ( have_posts() ) : the_post(); ?>
-							<li>
-								<?php
-								printf(
-									'<a rel="bookmark" href="%1$s" title="%2$s %3$s">%3$s</a>',
-									esc_url( apply_filters( 'the_permalink', get_permalink( $post ), $post ) ),
-									esc_attr( __( 'Permanent Link:', 'understrap' ) ),
-									the_title( '', '', false )
-								);
-								?>
-								<?php understrap_posted_on(); ?> 
-								<?php esc_html_e( 'in', 'understrap' ); ?> 
-								<?php the_category( '&' ); ?>
-							</li>
-						<?php endwhile; ?>
+            </main><!-- #main -->
 
-					<?php else : ?>
+            <!-- The pagination component -->
 
-						<?php get_template_part( 'loop-templates/content', 'none' ); ?>
+            <?php understrap_pagination(); ?>
+        </div> <!-- col-md-7 finish -->
+        <div class="col-12 col-md-2">
 
-					<?php endif; ?>
+        </div> <!-- col-md-2 finish -->
+    </div> <!-- row finish -->
+</div> <!-- container finish -->
 
-					<!-- End Loop -->
 
-				</ul>
 
-			</main><!-- #main -->
 
-			<!-- The pagination component -->
-			<?php understrap_pagination(); ?>
 
-			<!-- Do the right sidebar check -->
-			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
-
-		</div> <!-- .row -->
-
-	</div><!-- #content -->
-
-</div><!-- #author-wrapper -->
+<?php get_template_part('global-templates/footer-one'); ?>
 
 <?php get_footer(); ?>

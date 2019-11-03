@@ -34,25 +34,25 @@ if ( ! function_exists( 'understrap_pagination' ) ) {
 
 		?>
 
-		<nav aria-label="<?php echo $args['screen_reader_text']; ?>">
+<nav aria-label="<?php echo $args['screen_reader_text']; ?>">
 
-			<ul class="pagination">
+    <ul class="pagination" style="justify-content: center;">
 
-				<?php
+        <?php
 				foreach ( $links as $key => $link ) {
 					?>
-					<li class="page-item <?php echo strpos( $link, 'current' ) ? 'active' : ''; ?>">
-						<?php echo str_replace( 'page-numbers', 'page-link', $link ); ?>
-					</li>
-					<?php
+        <li class="page-item <?php echo strpos( $link, 'current' ) ? 'active' : ''; ?>">
+            <?php echo str_replace( 'page-numbers', 'page-link', $link ); ?>
+        </li>
+        <?php
 				}
 				?>
 
-			</ul>
+    </ul>
 
-		</nav>
+</nav>
 
-		<?php
+<?php
 	}
 }
 

@@ -14,9 +14,8 @@
                     <?php the_title(); ?>
                 </a>
             </h2>
-            <span class="post-meta">
-                <?php understrap_post_tags(); ?>
-            </span>
+            <!-- import post - meta  -->
+            <?php get_template_part('loop-templates/post-meta'); ?>
         </div>
     </div>
 </div>

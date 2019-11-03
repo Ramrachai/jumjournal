@@ -506,7 +506,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 								}
 								// Restore original post data.
 								wp_reset_postdata();
-							?>
+                        ?>
 
                     </div>
                     <!-- .post-slider-container -->

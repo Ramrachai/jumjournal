@@ -1,0 +1,24 @@
+.home-btn {
+  background: linear-gradient(90deg, #00c08d, #7ed563);
+  padding: 10px 22px;
+  max-width: 60%;
+  border-radius: 50px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background 3s;
+  &:hover {
+    color: white;
+    background: linear-gradient(90deg, #7ed563, #00c08d);
+  }
+}
+
+.bullets {
+  text-transform: capitalize;
+  border: 1px solid #7ed563;
+  border-radius: 50px;
+  padding: 5px 10px;
+  background: #7ed563;
+  color: white;
+  box-shadow: inset 3px 2px 5px 0px #335d26;
+}

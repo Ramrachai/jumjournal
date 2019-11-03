@@ -414,6 +414,11 @@ audio {
   height: 40px;
 }
 
+.gradient-text {
+  background: linear-gradient(300deg, #00c08d, #7ed563);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 // Small devices (landscape phones, less than 768px)
 @media only screen and (max-width: 767.98px) {
   .text-content.type-one {

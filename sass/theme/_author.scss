@@ -1,0 +1,43 @@
+.author-header {
+  background: $gradient-green;
+  padding: 20px 5px;
+  img {
+    border: 4px solid #ffffff;
+    border-radius: 50%;
+  }
+  .pic-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .author-meta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 15px;
+    color: $black;
+  }
+  .author-avatar {
+    text-align: center;
+    width: 50%;
+    padding: 20px;
+  }
+}
+
+.author-wrapper .gradient-text {
+  padding-top: 50px;
+  text-align: center;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  word-spacing: 8px;
+}
+@media (max-width: 767.98px) {
+  .author-header {
+    padding: 20px 4%;
+    .pic-name {
+      flex-direction: column;
+    }
+  }
+}

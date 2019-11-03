@@ -40,21 +40,22 @@ $container = get_theme_mod( 'understrap_container_type' );
                             <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
                             <div class="post-meta">
-                                <span class="post-author">
+                                <span class="post-author" title="Post author">
                                     By <a href=" <?php echo get_author_posts_url(get_the_author_meta('ID'));?> ">
                                         <?php the_author();  ;?>
                                     </a>
-
                                 </span>
-                                <span class="post-time">
+
+                                <span class="post-time" title='Published Date'>
+                                    <i class="fa fa-calendar" aria-hidden="true"></i> &nbsp;
                                     <?php echo get_the_date( 'j F, Y' ); ?>
                                 </span>
-                                <span class="view-counter">
+                                <span class="view-counter" title='Post Viewed'>
                                     <?php setPostViews(get_the_ID()); ?>
-                                    <?php echo getPostViews(get_the_ID());?>
+                                    <i class="fas fa-eye"></i> <?php echo getPostViews(get_the_ID());?>
                                 </span>
-                                <span>
-                                    Commnets: <?php echo get_comments_number()?>
+                                <span title='Comments'>
+                                    <i class="fas fa-comment"></i> <?php echo get_comments_number()?>
                                 </span>
                             </div>
 
@@ -62,9 +63,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
                         <div class="entry-content">
                             <?php the_post_thumbnail(); ?>
-
                             <p class="caption"> <?php the_post_thumbnail_caption(); ?> </p>
-                            <?php the_content(); ?>
+                            <div class='post-description'> <?php the_content(); ?> </div>
+                            <hr />
+                            <div class='post-category'><span>Post Category: </span> <?php the_category();?> </div>
+                            <div class='post-tag'><?php the_tags();?> </div>
                         </div>
 
                         <?php endif; //end ofstandard posts: articles ?>

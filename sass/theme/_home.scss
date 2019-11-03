@@ -423,20 +423,7 @@ section.file-submit:after {
     }
   }
 }
-.home-btn {
-  background: linear-gradient(90deg, #00c08d, #7ed563);
-  padding: 10px 22px;
-  max-width: 60%;
-  border-radius: 50px;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: bold;
-  transition: background 3s;
-  &:hover {
-    color: white;
-    background: linear-gradient(90deg, #7ed563, #00c08d);
-  }
-}
+
 @media only screen and (max-width: 768px) {
   .file-submit-container {
     max-width: 100%;
