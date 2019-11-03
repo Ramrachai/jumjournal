@@ -15,16 +15,36 @@
   &:hover {
     box-shadow: $dp8;
   }
+<<<<<<< HEAD
+=======
   .post-image {
     text-align: center;
     height: 200px;
     overflow: hidden;
   }
+>>>>>>> 13f779ba34669f165648c151428efb4f70c7455f
 
   .post-content {
     padding: 0.5rem;
     min-height: 5rem;
     .post-title {
+<<<<<<< HEAD
+      font-size: 0.875rem;
+      font-weight: 400;
+      margin-bottom: 0;
+      line-height: 1.4;
+    }
+    .post-meta {
+      margin-bottom: 0;
+      font-size: 0.625rem;
+      color: $grey;
+      a {
+        color: $grey;
+      }
+    }
+    .post-excerpt p {
+      font-size: 0.875rem;
+=======
       font-weight: bold;
       margin-bottom: 4px;
       margin-top: -8px;
@@ -37,6 +57,7 @@
 
     .post-excerpt p {
       font-size: 13px;
+>>>>>>> 13f779ba34669f165648c151428efb4f70c7455f
       text-align: justify;
       &:first-child {
         margin-bottom: 0.5rem;
@@ -91,23 +112,52 @@
     height: $post-image-height;
     border-radius: 0.25rem;
     .post-image {
+<<<<<<< HEAD
+      width: 60%;
+      height: $post-image-height;
+      float: left;
+      img {
+        height: $post-image-height;
+=======
       width: 50%;
       height: $post-image-height;
       float: left;
       img {
         height: auto;
+>>>>>>> 13f779ba34669f165648c151428efb4f70c7455f
         border-radius: 0.25rem 0 0 0.25rem;
         width: 100% !important;
       }
     }
     .post-content {
       float: left;
+<<<<<<< HEAD
+      width: 40%;
+=======
       width: 48%;
+>>>>>>> 13f779ba34669f165648c151428efb4f70c7455f
       padding: 1rem;
       border-radius: 0 0.25rem 0.25rem 0;
       height: $post-image-height;
 
       .post-title {
+<<<<<<< HEAD
+        font-size: 0.875rem;
+        font-weight: 400;
+        margin-bottom: 0;
+        line-height: 1.4;
+      }
+      .post-meta {
+        margin-bottom: 0;
+        font-size: 0.75rem;
+        color: $grey;
+        a {
+          color: $grey;
+        }
+      }
+      .post-excerpt p {
+        font-size: 0.875rem;
+=======
         font-size: 18px;
         font-weight: 400;
         margin-bottom: 0;
@@ -116,6 +166,7 @@
 
       .post-excerpt p {
         font-size: 13px;
+>>>>>>> 13f779ba34669f165648c151428efb4f70c7455f
         text-align: justify;
         &:first-child {
           margin-bottom: 0.5rem;
@@ -186,10 +237,16 @@
   .post-image {
     height: 12.25rem;
     width: auto;
+<<<<<<< HEAD
+    img {
+      width: 100%;
+      height: 12.25rem;
+=======
     overflow: hidden;
     img {
       width: 100%;
       height: auto;
+>>>>>>> 13f779ba34669f165648c151428efb4f70c7455f
     }
   }
   .post-content {
@@ -230,9 +287,15 @@
   margin-bottom: 1rem;
   .post-image {
     height: 12.25rem;
+<<<<<<< HEAD
+=======
     text-align: center;
+<<<<<<< HEAD
     background-size: cover;
     background-repeat: no-repeat;
+=======
+>>>>>>> 13f779ba34669f165648c151428efb4f70c7455f
+>>>>>>> 88118f1c63ce4e40354c950f95a7eb5ed7152da8
     img {
       width: 100%;
       height: 12.25rem;
@@ -253,7 +316,11 @@
       font-size: 0.675rem;
     }
     .post-meta {
+<<<<<<< HEAD
+      font-size: 0.625rem;
+=======
       font-size: 12px;
+>>>>>>> 13f779ba34669f165648c151428efb4f70c7455f
     }
   }
 }
@@ -326,6 +393,21 @@
 }
 .post-style-two .post-single:last-child {
   border-bottom: $border-bottom;
+<<<<<<< HEAD
+}
+// related post
+.related-post {
+  margin: 30px auto;
+  width: 80%;
+  .feature-text {
+    margin-bottom: 16px;
+    padding: 5px 0;
+  }
+}
+textarea#comment {
+  height: 120px;
+=======
+>>>>>>> 13f779ba34669f165648c151428efb4f70c7455f
 }
 
 .related-post {

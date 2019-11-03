@@ -21,7 +21,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="col-md-8">
 					<div class="feature-post-slider post-style-slider slider-one">
 						<div class="cat-tilte style-one color-one">
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/literature">Literature</a>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/literature">সাহিত্য</a>
 						</div>
 
 						<div class="post-slider-container owl-carousel owl-theme">
@@ -29,8 +29,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<?php
 								$args = array(
 									// Arguments for your query.
+<<<<<<< HEAD
+									'cat' => '10',
+=======
 									'cat' => 'literature',
 									'category_name' => 'literature',
+>>>>>>> 13f779ba34669f165648c151428efb4f70c7455f
 									'posts_per_page' => '3',
 									'order' => 'DESC',
 									'orderby' => 'date',
@@ -68,15 +72,19 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<div class="col-md-3 offset-md-1">
 					<div class="cat-tilte style-one color-two">
-						<a href="">Personality</a>
+						<a href="">ব্যক্তিত্ব</a>
 					</div>
 					<div class="post-style-square biography">
 
 						<?php
 							$args = array(
 								// Arguments for your query.
+<<<<<<< HEAD
+								'cat' => '11',
+=======
 								'cat' => 'personality',
 								'category_name' => 'personality',
+>>>>>>> 13f779ba34669f165648c151428efb4f70c7455f
 								'posts_per_page' => '2',
 								'order' => 'DESC',
 								'orderby' => 'date',
@@ -120,15 +128,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="row">
 				<div class="col-12">
 					<div class="cat-tilte style-one color-three">
-						<a href="">History</a>
+						<a href="">ইতিহাস</a>
 					</div>
 				</div>
 
         <?php
           $args = array(
             // Arguments for your query.
-            'cat' => '4',
-            'posts_per_page' => '3',
+            'cat' => '12',
+            'posts_per_page' => '4',
             'order' => 'DESC',
             'orderby' => 'date',
             'ignore_sticky_posts' => true,
@@ -171,7 +179,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="row">
 						<div class="col-12">
 							<div class="cat-tilte style-one color-four">
-								<a href="">Art & Culture And others</a>
+								<a href="">শিল্প সংস্কৃতি এবং অন্যান্য</a>
 							</div>
 						</div>
 					</div>
@@ -179,7 +187,7 @@ $container = get_theme_mod( 'understrap_container_type' );
           <?php
             $args = array(
               // Arguments for your query.
-              'cat' => '9',
+              'cat' => '13',
               'posts_per_page' => '6',
               'order' => 'DESC',
               'orderby' => 'date',
@@ -218,7 +226,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="row">
 						<div class="col-12">
 							<div class="cat-tilte style-one color-five">
-								<a href="">Politics</a>
+								<a href="">রাজনীতি</a>
 							</div>
 						</div>
 					</div>
@@ -226,7 +234,7 @@ $container = get_theme_mod( 'understrap_container_type' );
           <?php
             $args = array(
               // Arguments for your query.
-              'cat' => '6',
+              'cat' => '14',
               'posts_per_page' => '6',
               'order' => 'DESC',
               'orderby' => 'date',
@@ -271,14 +279,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="col-md-3">
 
 					<div class="cat-tilte style-one color-six">
-						<a href="">Interview</a>
+						<a href="">সাখাৎকার</a>
 					</div>
 
 					<div class="post-style-square cat-interview">
 						<?php
 							$args = array(
 								// Arguments for your query.
-								'cat' => '5',
+								'cat' => '15',
 								'posts_per_page' => '2',
 								'order' => 'DESC',
 								'orderby' => 'date',
@@ -313,7 +321,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="col-md-8 offset-md-1">
 					<div class="post-style-slider slider-two">
 						<div class="cat-tilte style-one color-seven">
-							<a href="">Report</a>
+							<a href="">প্রতিবেদন</a>
 						</div>
 						
 						<div class="post-slider-container owl-carousel owl-theme">
@@ -321,7 +329,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<?php
 								$args = array(
 									// Arguments for your query.
-									'cat' => '8',
+									'cat' => '16',
 									'posts_per_page' => '6',
 									'order' => 'DESC',
 									'orderby' => 'date',
@@ -369,14 +377,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="row">
 				<div class="col-6 col-12">
 					<div class="cat-tilte style-one color-eight">
-						<a href="">Education</a>
+						<a href="">শিক্ষা</a>
 					</div>
 				</div>
 				
         <?php
           $args = array(
             // Arguments for your query.
-            'cat' => '7',
+            'cat' => '17',
             'posts_per_page' => '4',
             'order' => 'DESC',
             'orderby' => 'date',

@@ -381,6 +381,56 @@ $container = get_theme_mod( 'understrap_container_type' );
     <h2>More from Jumjournal </h2>
 </div>
 
+<<<<<<< HEAD
+<div class="feature-container" >
+
+  <div class="particles-container">
+      
+      <div id="particles1-js"></div>
+      <div id="particles2-js"></div>
+      <div id="particles3-js"></div>
+      <div id="particles4-js"></div>
+      <div id="particles5-js"></div>
+      <div id="particles6-js"></div>
+      <div id="particles7-js"></div>
+      <div id="particles8-js"></div>
+      <div id="particles9-js"></div>
+      <div id="particles10-js"></div>
+      <div id="particles11-js"></div>
+      <div id="particles12-js"></div>
+      
+  </div>
+  
+  <div class="container all-features" id = 'features'>
+    <div class="row">
+      <div class="col-12 features">
+      <!-- learn -->
+        <div class="learn">
+          <i class="fas fa-graduation-cap"></i>
+          <h3>Learn</h3>
+          <p>Let’s explore what’s on Jumjournal.There are lot's of stuff regarding our own history, culture, people,lifestyle and struggle.</p>
+          <a href="<?php echo esc_url( home_url( '/' ) ); ?>bangla-blog" alt="learn" class ='btn home-btn  '>Learn More</a>
+        </div>
+      <!-- learn -->
+
+      <!-- Entertainment -->
+      <div class="entertainment">
+      <i class="fa fa-music"></i>
+          <h3>Entertainment</h3>
+          <p>Feel Your Identity. Photos, videos and musics are organized at one place to enjoy and feel them even more better.</p>
+          <a href="" class ='btn home-btn ' alt="entertaiment">Learn More</a>
+        </div>
+      <!-- Entertainment -->
+
+      <!-- Contribute -->
+      <div class="contribute">
+      <i class="fas fa-hands-helping"></i>
+          <h3>Contribute</h3>
+          <p>Let's make it even better. Jumjournal is comitted to build a great platform of online resources.Be a part of this initiative.</p>
+          <a href="<?php echo esc_url( home_url( '/' ) ); ?>submit" class ='btn home-btn' alt="contribute">Learn More</a>
+        </div>
+      <!-- Contribute -->
+=======
 <div class="feature-container">
 
     <div class="particles-container">
@@ -432,6 +482,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                     <a href="#" class='btn home-btn '>Learn More</a>
                 </div>
                 <!-- Contribute -->
+>>>>>>> 13f779ba34669f165648c151428efb4f70c7455f
 
 
             </div>
@@ -440,6 +491,16 @@ $container = get_theme_mod( 'understrap_container_type' );
 </div>
 
 
+<<<<<<< HEAD
+<section class = 'file-submit'>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 file-submit-container">
+        <h2>Send us your files</h2>
+        <p>Your small contribution can play very important role to sustainably conserve your culture for present and future generations. Get started today, be a part of jumjournal community. You can send us Audios, Videos, Pictures and Pdf books. </p>
+        <div class='submit-btn-container'> <a class = 'home-btn' href="<?php echo esc_url( home_url( '/' ) ); ?>submit">File submit</a> </div>
+      </div>
+=======
 <section class='file-submit'>
     <div class="container">
         <div class="row">
@@ -451,6 +512,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                 <div class='submit-btn-container'> <a href="#" class='home-btn'>File submit</a> </div>
             </div>
         </div>
+>>>>>>> 13f779ba34669f165648c151428efb4f70c7455f
     </div>
 </section>
 
