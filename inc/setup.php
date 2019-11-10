@@ -48,6 +48,8 @@ if ( ! function_exists ( 'understrap_setup' ) ) {
 		register_nav_menus( array(
 			// user menu on header
 			'user-menu' 					=> __( 'User Menu', 'understrap' ),
+			'user-menu-loggedin' 					=> __( 'User logged In Menu', 'understrap' ),
+			'user-menu-loggedout' 					=> __( 'User logged Out Menu', 'understrap' ),
 			// header menu: main menu
 			'header-menu' 				=> __( 'Header Menu', 'understrap' ),
 			// register menus for footer widgets
