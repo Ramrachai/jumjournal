@@ -30,7 +30,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 
         <!-- nav bar start  -->
-        <nav class="top-nav navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="top-nav navbar navbar-expand-lg navbar-dark ">
 
             <div class="container">
 

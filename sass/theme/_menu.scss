@@ -1,6 +1,26 @@
 #userMenu {
-  display: none;
+  justify-content: space-between;
+  margin-left: 20%;
+  .navbar-nav {
+    li a {
+      font-size: 12px;
+    }
+    i {
+      background: $grey;
+      padding: 8px;
+      border-radius: 50%;
+    }
+    a[title="Account"] {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &:after {
+        display: none;
+      }
+    }
+  }
 }
 .top-nav {
-  display: none;
+  background-color: $dark-light;
+  height: 60px;
 }
