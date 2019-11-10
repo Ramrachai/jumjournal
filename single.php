@@ -4,11 +4,9 @@
  *
  * @package understrap
  */
-
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
-
 get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
@@ -20,50 +18,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 <?php endif; ?>
 
 <div class="site-post main-content">
-<<<<<<< HEAD
-	<div class="<?php echo esc_attr( $container ); ?>">
-		<div class="row justify-content-center">
-			<div class="col-12 <?php if ( ! has_post_format() ): echo 'col-md-7'; else: echo 'col-md-10'; endif; ?>">
-				<div class="post-content-main <?php if ( ! has_post_format() ): echo 'article-margin'; endif; ?> ">
-
-					<!--loop start-->
-					<?php while ( have_posts() ) : the_post(); ?>
-
-						<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-
-							<!-- check if standard post -->
-							<?php if ( ! has_post_format() ): // standard posts: articles ?>
-
-								<header class="entry-header">
-									<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-									<p class="post-time">
-										<?php echo get_the_date( 'j F, Y' ); ?>
-									</p>
-								</header>
-
-								<div class="entry-content">
-									<?php the_content(); ?>
-								</div>
-
-							<?php endif; //end ofstandard posts: articles ?>
-
-
-							<!-- check if book, photo, audio or video -->
-							<?php if( get_post_format() ) { get_template_part('loop-templates/post-formats'); } ?>
-
-						</article><!-- #post-## -->
-
-						<?php understrap_article_nav(); ?>
-
-					<?php endwhile; // end of the loop. ?>
-					<!-- end-->
-
-				</div><!--.page-content-main-->
-
-			</div><!--.col-->
-		</div>
-		<div class=" related-post">
-=======
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class='col-md-2'>
@@ -153,7 +107,6 @@ $container = get_theme_mod( 'understrap_container_type' );
             </div>
         </div>
         <div class=" related-post">
->>>>>>> 13f779ba34669f165648c151428efb4f70c7455f
             <div class="container">
                 <div class="feature-text">
                     <h2>Related posts</h2>
@@ -165,16 +118,9 @@ $container = get_theme_mod( 'understrap_container_type' );
             </div>
 
         </div>
-<<<<<<< HEAD
-				
-		<!-- <?php jumjournal_related_books(); ?> -->
-
-		<?php
-=======
 
 
         <?php
->>>>>>> 13f779ba34669f165648c151428efb4f70c7455f
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( ( comments_open() || get_comments_number() ) && ! has_post_format() ) : ?>
         <div class="row justify-content-center">
