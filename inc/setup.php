@@ -50,8 +50,8 @@ if ( ! function_exists ( 'understrap_setup' ) ) {
 			'user-menu' 					=> __( 'User Menu', 'understrap' ),
 			'user-menu-loggedin' 					=> __( 'User logged In Menu', 'understrap' ),
 			'user-menu-loggedout' 					=> __( 'User logged Out Menu', 'understrap' ),
-			// header menu: main menu
-			'header-menu' 				=> __( 'Header Menu', 'understrap' ),
+			// Primary menu: main menu
+			'primary-menu' 				=> __( 'Primary Menu', 'understrap' ),
 			// register menus for footer widgets
 			'footer-menu-one' 		=> __( 'Footer Widget Menu One', 'understrap' ),
 			'footer-menu-two' 		=> __( 'Footer Widget Menu Two', 'understrap' ),

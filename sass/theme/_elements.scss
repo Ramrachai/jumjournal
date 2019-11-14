@@ -1,3 +1,12 @@
+.gradient-bg {
+  background: linear-gradient(90deg, #00c08d, #7ed563);
+}
+.gradient-text {
+  background: linear-gradient(90deg, #00c08d, #7ed563);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 // Content classes
 .content-inner {
   // display: flex;
