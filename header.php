@@ -24,14 +24,26 @@ $container = get_theme_mod( 'understrap_container_type' );
 <body <?php body_class(); ?>>
     <div class="site" id="page">
         <header class='navigation-header'>
-            <?php get_template_part('components/top-nav');?>
-            <div class='fake-menubar gradient-bg'></div>
-            <div id="primary-toggle-menu" class="collapse">
-                <?php get_template_part('components/primary-nav');?>
+            <div class='top-nav-container'>
+                <?php get_template_part('components/top-nav');?>
             </div>
-            <button class="btn primary-menu-toggler" data-toggle="collapse" data-target="#primary-toggle-menu">
-                <i class='fa fa-bars'></i>
-                Menu
-            </button>
+
+            <div class='primary-nav-container-pc hide-on-mobile'>
+                <div class='fake-menubar gradient-bg'></div>
+                <div id="primary-toggle-menu" class="collapse">
+                    <?php get_template_part('components/primary-nav');?>
+                </div>
+                <button class="btn primary-menu-toggler" data-toggle="collapse" data-target="#primary-toggle-menu">
+                    <i class='fa fa-bars'></i>
+                    Menu
+                </button>
+            </div>
+
+            <div class='primary-nav-container-mobile hide-on-pc '>
+                <?php  get_template_part('components/primary-nav');?>
+            </div>
+
+
+
         </header>
         <div class="empty-space-30"></div>

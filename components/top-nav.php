@@ -8,7 +8,8 @@
                     <?php get_template_part('components/logo'); ?> </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#userMenu"
                     aria-controls="userMenu" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <!-- <span class="navbar-toggler-icon"></span> -->
+                    <i class="fas fa-ellipsis-h"></i>
                 </button>
                 <!-- End -->
 
