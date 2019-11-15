@@ -323,6 +323,11 @@
   width: 0;
   padding: 50px;
 }
+.empty-space-30 {
+  height: 0;
+  width: 0;
+  padding: 30px;
+}
 .empty-space-20 {
   height: 0;
   width: 0;
@@ -428,6 +433,7 @@ audio {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 // Small devices (landscape phones, less than 768px)
 @media only screen and (max-width: 767.98px) {
   .text-content.type-one {

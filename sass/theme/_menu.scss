@@ -1,3 +1,11 @@
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
 #userMenu {
   justify-content: space-between;
   margin-left: 20%;
@@ -28,6 +36,37 @@
 .top-nav {
   background-color: $dark-light;
   padding: 0;
+}
+.primary-nav {
+  padding: 0;
+}
+.primary-menu-toggler {
+  margin-left: 20px;
+  font-size: 12px;
+  padding: 4px 10px;
+  background: $logo-color;
+  border: 0;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  color: white;
+  &:active,
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.fake-menubar {
+  height: 0;
+  width: 100%;
+  padding: 2px;
+}
+
+.primary-nav .navbar-nav .nav-link {
+  color: rgb(255, 255, 255);
+  padding: 4px 14px;
+  font-size: 14px;
 }
 @media only screen and (max-width: 768px) {
   #userMenu {
