@@ -23,7 +23,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <body <?php body_class(); ?>>
     <div class="site" id="page">
-        <header>
+        <header class='navigation-header'>
             <?php get_template_part('components/top-nav');?>
             <div class='fake-menubar gradient-bg'></div>
             <div id="primary-toggle-menu" class="collapse">
