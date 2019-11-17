@@ -420,5 +420,5 @@ function excerpt($limit) {
 	  $excerpt = implode(" ",$excerpt);
 	}	
 	$excerpt = preg_replace('`[[^]]*]`','',$excerpt);
-	return $excerpt;
+	return  "<p>". $excerpt. "</p>" ;
   }

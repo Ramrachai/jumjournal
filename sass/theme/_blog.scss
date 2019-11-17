@@ -92,8 +92,10 @@
       width: 60%;
       height: $post-image-height;
       float: left;
+      overflow: hidden;
+      border: 6px solid white;
       img {
-        height: $post-image-height;
+        height: auto;
         border-radius: 0.25rem 0 0 0.25rem;
         width: 100% !important;
       }
@@ -191,9 +193,11 @@
   .post-image {
     height: 12.25rem;
     width: auto;
+    overflow: hidden;
+    border: 6px solid white;
     img {
       width: 100%;
-      height: 12.25rem;
+      height: auto;
     }
   }
   .post-content {
@@ -233,14 +237,15 @@
 .post-style-one .post-single {
   margin-bottom: 1rem;
   .post-image {
-    height: 12.25rem;
-
+    height: 7.25rem;
+    overflow: hidden;
     text-align: center;
     background-size: cover;
     background-repeat: no-repeat;
+    border: 6px solid white;
     img {
       width: 100%;
-      height: 12.25rem;
+      height: auto;
     }
   }
 }
@@ -279,8 +284,10 @@
     margin-right: 2%;
     width: 28%;
     height: 4.375rem;
+    overflow: hidden;
+    padding: 6px;
     img {
-      height: 4.375rem;
+      height: auto;
       width: 4.375rem;
     }
   }
@@ -308,8 +315,9 @@
     margin-right: 0;
     width: 100%;
     height: 10rem;
+    overflow: hidden;
     img {
-      height: 10rem;
+      height: auto;
       width: 100%;
       border-radius: 0.125rem 0.125rem 0 0;
     }
