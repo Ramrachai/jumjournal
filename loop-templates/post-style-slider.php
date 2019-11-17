@@ -20,7 +20,9 @@
                         <?php get_template_part('loop-templates/post-meta'); ?>
 
                         <div class="post-excerpt">
-                            <?php the_excerpt(); ?>
+                            <?php echo excerpt(20) ; ?>
+                            <br>
+                            <a href="<?php the_permalink();?>" class='read-more'>Read more</a>
                         </div>
                     </div>
                 </div>
