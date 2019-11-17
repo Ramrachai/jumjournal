@@ -1,4 +1,41 @@
-.get-involved-1stdiv{
-  background-color: gray;
-  padding:30px;
+.get-involve.banner {
+  height: 200px;
+  width: 100%;
+  background-image: url("../images/get-involved.png");
+  background-size: contain;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  // animation: getInvolve 120s infinite linear;
+}
+.get-involved-1stdiv {
+  .col-md-5,
+  .col-md-3 {
+    background: #3a4950;
+    padding: 14px 26px;
+    border-radius: 20px;
+    margin-top: 10px;
+  }
+}
+
+@keyframes getInvolve {
+  0% {
+    background-position-x: 0%;
+  }
+  50% {
+    background-position-x: 250%;
+  }
+  100% {
+    background-position-x: 0%;
+  }
+}
+// for mobile
+@media (max-width: 768px) {
+  .get-involve.banner {
+    height: 100px;
+  }
+  .col-md-5,
+  .col-md-3 {
+    background: white !important;
+    color: $grey2;
+  }
 }

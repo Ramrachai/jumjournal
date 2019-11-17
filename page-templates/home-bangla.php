@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Homepage
+ * Template Name: Bangla Homepage 
  *
  * This template will be used as homepage
  * @package understrap
@@ -20,12 +20,12 @@ $container = get_theme_mod( 'understrap_container_type' );
             <div class="col-md-6 col-12  ">
                 <div class="heading-container">
                     <h1>
-                        <span> share </span>
-                        and
-                        <span> explore </span>
+                        <span> শেয়ার </span>
+                        এবং
+                        <span> এক্সপ্লোর </span>
                     </h1>
-                    <h3>new ideas and thoughts</h3>
-                    <p>representing diverse views of diverse people </p>
+                    <h3> নতুন আইডিয়া এবং চিন্তা</h3>
+                    <p> ৈবচিত্র মানুষ ৈবচিত্র চিন্তা </p>
                     <a class="home-btn" href="<?php echo esc_url( home_url( '/' ) ); ?>Get-involved">Get involved</a>
                 </div>
 

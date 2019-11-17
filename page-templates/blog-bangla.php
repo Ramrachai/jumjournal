@@ -1,8 +1,8 @@
 <?php
 /**
- * Template Name: Blog Bangla
+ * Template Name: Blog English
  *
- * This template will be used as Bangla blog homepage
+ * This template will be used as English blog homepage
  * @package understrap
  */
 if ( ! defined( 'ABSPATH' ) ) {
@@ -13,7 +13,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
 <!-- slider -->
-<div class="posts-block block-one mt-5">
+<div class="posts-block block-one">
     <div class="container">
         <div class="row">
             <div class="col-md-8">
@@ -62,44 +62,45 @@ $container = get_theme_mod( 'understrap_container_type' );
                 <!--.feature-post-slider-->
             </div>
 
-            <div class="col-md-3 offset-md-1">
-                <div class="cat-tilte style-one color-two">
-                    <a href="">Personality</a>
-                </div>
-                <div class="post-style-square biography">
+            <div class="col-md-3">
 
+                <div class="cat-tilte style-one color-six">
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>category/personality">Personality</a>
+                </div>
+
+                <div class="post-style-square cat-interview">
                     <?php
-							$args = array(
-								// Arguments for your query.
-								'cat' => 'personality',
-								'category_name' => 'personality',
-								'posts_per_page' => '2',
-								'order' => 'DESC',
-								'orderby' => 'date',
-								'ignore_sticky_posts' => true,
-								'post_type' => 'post',
-								'post_status' => 'publish'
-							);
-							// Custom query.
-							$query = new WP_Query( $args );
-							
-							// Check that we have query results.
-							if ( $query->have_posts() ) {
-							
-								// Start looping over the query results.
-								while ( $query->have_posts() ) {
-									$query->the_post();
-									
-									// Contents of the queried post results go here.
-									get_template_part( 'loop-templates/post-style-square-bio' );
-								}
-							
-							}
-							// Restore original post data.
-							wp_reset_postdata();
-						?>
-
+                            $args = array(
+                                // Arguments for your query.
+                                'cat' => 'personality',
+                                'category_name' => 'personality', 
+                                'posts_per_page' => '1',
+                                'order' => 'DESC',
+                                'orderby' => 'date',
+                                'ignore_sticky_posts' => true,
+                                'post_type' => 'post',
+                                'post_status' => 'publish'
+                            );
+                            // Custom query.
+                            $query = new WP_Query( $args );
+                            
+                            // Check that we have query results.
+                            if ( $query->have_posts() ) {
+                            
+                                // Start looping over the query results.
+                                while ( $query->have_posts() ) {
+                                    $query->the_post();
+                                    
+                                    // Contents of the queried post results go here.
+                                    get_template_part( 'loop-templates/post-style-square' );
+                                }
+                            
+                            }
+                            // Restore original post data.
+                            wp_reset_postdata();
+                        ?>
                 </div>
+
             </div>
 
         </div>
@@ -113,15 +114,16 @@ $container = get_theme_mod( 'understrap_container_type' );
         <div class="row">
             <div class="col-12">
                 <div class="cat-tilte style-one color-three">
-                    <a href="">History</a>
+                    <a href="<?php echo esc_url(home_url('/')); ?>/category/history">History</a>
                 </div>
             </div>
 
             <?php
           $args = array(
             // Arguments for your query.
-            'cat' => '4',
-            'posts_per_page' => '3',
+            'cat' => 'history',
+			'category_name' => 'history',
+            'posts_per_page' => '4',
             'order' => 'DESC',
             'orderby' => 'date',
             'ignore_sticky_posts' => true,
@@ -161,7 +163,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                 <div class="row">
                     <div class="col-12">
                         <div class="cat-tilte style-one color-four">
-                            <a href="">Art & Culture And others</a>
+                            <a href="<?php echo esc_url(home_url('/'));?>category/art">Art & Culture And others</a>
                         </div>
                     </div>
                 </div>
@@ -169,7 +171,8 @@ $container = get_theme_mod( 'understrap_container_type' );
                 <?php
             $args = array(
               // Arguments for your query.
-              'cat' => '9',
+			  'cat' => 'art',
+			  'category_name' => 'art',
               'posts_per_page' => '6',
               'order' => 'DESC',
               'orderby' => 'date',
@@ -205,7 +208,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                 <div class="row">
                     <div class="col-12">
                         <div class="cat-tilte style-one color-five">
-                            <a href="">Politics</a>
+                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>category/politics">Politics</a>
                         </div>
                     </div>
                 </div>
@@ -213,7 +216,8 @@ $container = get_theme_mod( 'understrap_container_type' );
                 <?php
             $args = array(
               // Arguments for your query.
-              'cat' => '6',
+			  'cat' => 'politics',
+			  'category_name' => 'politics', 
               'posts_per_page' => '6',
               'order' => 'DESC',
               'orderby' => 'date',
@@ -255,14 +259,15 @@ $container = get_theme_mod( 'understrap_container_type' );
             <div class="col-md-3">
 
                 <div class="cat-tilte style-one color-six">
-                    <a href="">Interview</a>
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>category/interview">Interview</a>
                 </div>
 
                 <div class="post-style-square cat-interview">
                     <?php
 							$args = array(
 								// Arguments for your query.
-								'cat' => '5',
+								'cat' => 'interview',
+								'category_name' => 'interview', 
 								'posts_per_page' => '2',
 								'order' => 'DESC',
 								'orderby' => 'date',
@@ -294,7 +299,7 @@ $container = get_theme_mod( 'understrap_container_type' );
             <div class="col-md-8 offset-md-1">
                 <div class="post-style-slider slider-two">
                     <div class="cat-tilte style-one color-seven">
-                        <a href="">Report</a>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>category/report">Report</a>
                     </div>
 
                     <div class="post-slider-container owl-carousel owl-theme">
@@ -302,7 +307,8 @@ $container = get_theme_mod( 'understrap_container_type' );
                         <?php
 								$args = array(
 									// Arguments for your query.
-									'cat' => '8',
+									'cat' => 'report',
+									'category_name' => 'report', 
 									'posts_per_page' => '6',
 									'order' => 'DESC',
 									'orderby' => 'date',
@@ -347,14 +353,15 @@ $container = get_theme_mod( 'understrap_container_type' );
         <div class="row">
             <div class="col-6 col-12">
                 <div class="cat-tilte style-one color-eight">
-                    <a href="">Education</a>
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>category/education">Education</a>
                 </div>
             </div>
 
             <?php
           $args = array(
             // Arguments for your query.
-            'cat' => '7',
+			'cat' => 'education',
+			'category_name' => 'education', 
             'posts_per_page' => '4',
             'order' => 'DESC',
             'orderby' => 'date',
@@ -387,6 +394,103 @@ $container = get_theme_mod( 'understrap_container_type' );
     </div>
 </div>
 <!--cat:education-->
+
+<!-- cat: poem & editorial -->
+<div class="posts-block block-one">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+
+                <div class="cat-tilte style-one color-six">
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>category/poem">Poem</a>
+                </div>
+
+                <div class="post-style-square cat-interview">
+                    <?php
+							$args = array(
+								// Arguments for your query.
+								'cat' => 'poem',
+								'category_name' => 'poem', 
+								'posts_per_page' => '1',
+								'order' => 'DESC',
+								'orderby' => 'date',
+								'ignore_sticky_posts' => true,
+								'post_type' => 'post',
+								'post_status' => 'publish'
+							);
+							// Custom query.
+							$query = new WP_Query( $args );
+							
+							// Check that we have query results.
+							if ( $query->have_posts() ) {
+							
+								// Start looping over the query results.
+								while ( $query->have_posts() ) {
+									$query->the_post();
+									
+									// Contents of the queried post results go here.
+									get_template_part( 'loop-templates/post-style-square' );
+								}
+							
+							}
+							// Restore original post data.
+							wp_reset_postdata();
+						?>
+                </div>
+
+            </div>
+            <div class="col-md-8 offset-md-1">
+                <div class="post-style-slider slider-two">
+                    <div class="cat-tilte style-one color-seven">
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>category/editorial">Editorial</a>
+                    </div>
+
+                    <div class="post-slider-container owl-carousel owl-theme">
+
+                        <?php
+								$args = array(
+									// Arguments for your query.
+									'cat' => 'editorial',
+									'category_name' => 'editorial', 
+									'posts_per_page' => '6',
+									'order' => 'DESC',
+									'orderby' => 'date',
+									'ignore_sticky_posts' => true,
+									'post_type' => 'post',
+									'post_status' => 'publish'
+								);
+								// Custom query.
+								$query = new WP_Query( $args );
+								
+								// Check that we have query results.
+								if ( $query->have_posts() ) {
+								
+									// Start looping over the query results.
+									while ( $query->have_posts() ) {
+										$query->the_post();
+										
+										// Contents of the queried post results go here.
+										get_template_part( 'loop-templates/post-style-slider-two' );
+									}
+								
+								}
+								// Restore original post data.
+								wp_reset_postdata();
+                        ?>
+
+                    </div>
+                    <!-- .post-slider-container -->
+
+                </div>
+                <!--.feature-post-slider-->
+            </div>
+        </div>
+        <!--.row-->
+    </div>
+</div>
+<!--cat:poem & editorial-->
+
+
 
 <?php get_template_part('global-templates/footer-one'); ?>
 
