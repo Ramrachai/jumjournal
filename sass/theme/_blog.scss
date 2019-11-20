@@ -366,6 +366,32 @@ textarea#comment {
 }
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
+  .posts-block.block-one {
+    .post-excerpt {
+      display: none;
+    }
+    .owl-stage-outer {
+      height: 160px;
+    }
+  }
+  .post-style-two .post-single:nth-child(2) .post-content .post-excerpt {
+    display: none;
+  }
+  .post-style-two .post-single:nth-child(2) .post-content {
+    min-height: auto;
+  }
+  .post-style-slider .post-item .post-content {
+    width: 50%;
+    padding-top: 7%;
+    height: auto;
+  }
+  .post-style-slider .post-item .post-image {
+    width: 50%;
+  }
+  .post-style-slider .post-item .post-image img {
+    padding-top: 10px;
+  }
+
   // Slider
   .post-style-slider .post-itrem .post-image,
   .post-style-slider .post-itrem .post-content {
@@ -412,11 +438,11 @@ textarea#comment {
   }
   // Post Style Square
   .post-style-square .post-single .post-image img {
-    height: 250px;
+    height: auto;
   }
   .post-style-square .post-single {
     margin-bottom: 1rem;
-    width: 48%;
+    width: 100%;
     float: left;
     .post-content {
       height: auto;
